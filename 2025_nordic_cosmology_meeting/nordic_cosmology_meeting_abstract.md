@@ -26,4 +26,3 @@ As the latest addition,
 to include support for arbitrary equations of state and
 therefore for a temperature- and phase-dependent sound speed $c_s(T,\phi)$,
 extending the simulations beyond the ultrarelativistic assumption of the bag model.
-    
