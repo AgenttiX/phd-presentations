@@ -7,23 +7,93 @@
 		<title>Mika's PhD presentations</title>
 
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/5.1.0/reveal.css" integrity="sha512-QoQNoZ/M2rszZDa/fih2AL8/FthUzoO1FGqeWjmcEC8MGM1lLqbmEMYEk6+r+RwbmwRuSClswzihvIJsXv6moQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <!--
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/5.1.0/theme/black.css" integrity="sha512-HGm33xdnAzM21bps9HezvOVCVNuvuwzYiIZC1P2+FKYBWfktgDPV/JuqYOBn4qGA+eWKk+iHG1tS4JjWlaAstg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        -->
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/5.1.0/theme/moon.min.css" integrity="sha512-hWzyYMl/3xUkgV9CT1BFVHiO4wf+HzJPo6VhgcUEiLbjHiFJAjjBAeLeJdR3w12ylBtUx4n6IoczkJ6DSc6+4A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+		<style>
+			.smaller {
+				font-size: 0.8em;
+			}
+			.smaller h2 {
+				font-size: 2em;
+			}
+		</style>
 	</head>
 	<body>
 		<div class="reveal">
-			<div class="slides">
-				<section>Slide 1</section>
-				<section>Slide 2</section>
+			<div class="slides smaller">
+				<section>
+					<h2>Generating gravitational wave spectra from equations of state for phase transitions in the early universe</h2>
+					<p>Mika Mäki, Doctoral Researcher, Computational Field Theory group, University of Helsinki</p>
+					<p>14.3.2025</p>
+				</section>
+				<section data-background-video="https://agenttix.kapsi.fi/fileshare/phd-presentations/infant-universe-blows-bubbles.webm" data-background-video-loop data-background-video-muted>
+					<footer>Video by David Weir</footer>
+				</section>
+				<!--
+				<section>
+					<iframe class="r-stretch" data-src="https://www.youtube-nocookie.com/embed/mfGL8CpORPA?si=YikXa6wWHNHvwRah&autoplay=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+				</section>
+				<section data-background-iframe="https://www.youtube-nocookie.com/embed/mfGL8CpORPA?si=YikXa6wWHNHvwRah&autoplay=1"></section>
+				-->
+				<section>
+					<h2>Phase transitions in the early universe</h2>
+					<img class="r-stretch" src="../fig/relativistic_combustion.svg" alt="Relativistic combustion">
+					<ul>
+						<li>Black: phase boundary</li>
+						<li>Colour: velocity of moving plasma</li>
+					</ul>
+				</section>
+				<section>
+					<h2>Self-similar hydrodynamics of first-order phase transitions in the early universe</h2>
+					<ul>
+						<li>PTtools simulation framework</li>
+						<li>Simulation of a single expanding self-similar spherically symmetric bubble &rArr; GW power spectrum</li>
+						<li>Key parameters: $v_\text{wall}, \alpha_n, T_n, r_*,$<br>two of these: $p(T,\phi), e(T,\phi), s(T,\phi)$</li>
+					</ul>
+				</section>
+				<section>
+					<h2>General equation of state</h2>
+					<ul>
+						<li>General equation of state: $p(T,\phi) = \frac{\pi^2}{90} g_p(T) T^4 - V(T,\phi)$</li>
+						<ul>
+							<li>Sound speed $c_s \equiv \frac{dp}{de} \neq \frac{1}{\sqrt{3}}$</li>
+						</ul>
+					</ul>
+				</section>
+				<section>
+					<h2>PTtools</h2>
+					<ul>
+						<li>Python-based simulation framework</li>
+						<li>Based on the Sound Shell Model</li>
+						<ul>
+							<li>Single bubble</li>
+						</ul>
+					</ul>
+					<! TODO add QR code to PTtools dev branch here>
+				</section>
+				<section>
+					<h2>Fluid velocity spectra</h2>
+					<img class="r-stretch" src="../fig/const_cs_gw_v.svg" alt="Velocity spectra">
+				</section>
+				<section>
+					<h2>Gravitational wave power spectra</h2>
+					<img class="r-stretch" src="../fig/const_cs_gw.svg" alt="GW power spectra">
+				</section>
 			</div>
 		</div>
 
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/5.1.0/reveal.js" integrity="sha512-35L3EFHQcGaTZ6QN9wAg9iK1hTPVCn8RGsscuXjm5JdmDRyOw+/IWJ4wavGkozQ8VDoddD7nV1psHgu/BYNpxQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/5.1.0/reveal.js" integrity="sha512-35L3EFHQcGaTZ6QN9wAg9iK1hTPVCn8RGsscuXjm5JdmDRyOw+/IWJ4wavGkozQ8VDoddD7nV1psHgu/BYNpxQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/5.1.0/plugin/math/math.min.js" integrity="sha512-r8CLLeBm1OZX6ll1USdj99rqbY3Y9no8A1YUMy0l/kk+KFnlsQT5E/8gEs59Q7BRta0jBOZVwLqvmlWtdBzrXw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 		<script>
 			Reveal.initialize({
 				hash: true,
 
 				// Learn about plugins: https://revealjs.com/plugins/
 				// plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
+				plugins: [ RevealMath.MathJax3 ],
+				// showSlideNumber: "all"
 			});
 		</script>
 	</body>
