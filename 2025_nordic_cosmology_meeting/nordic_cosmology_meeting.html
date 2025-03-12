@@ -31,8 +31,8 @@
 			}
 			footer {
 				position: absolute;
-				bottom: 0;
-				left: 0;
+				bottom: 5px;
+				left: 5px;
 				z-index: 100;
 				transition: visibility 0s, opacity 1s linear;
 			}
@@ -55,11 +55,26 @@
 			<div class="slides">
 				<section>
 					<h1>Generating gravitational wave spectra from equations of state for phase transitions in the early universe</h1>
-					<p>Mika Mäki, Doctoral Researcher, Computational Field Theory group, University of Helsinki</p>
+					<p>Mika Mäki, Doctoral Researcher,<br>Computational Field Theory group, University of Helsinki</p>
 					<p>12.3.2025</p>
 				</section>
-				<section id="bubble-video" data-background-video="https://agenttix.kapsi.fi/fileshare/phd-presentations/infant-universe-blows-bubbles.webm" data-background-video-loop data-background-video-muted>
+				<section
+						id="bubble-video"
+						data-background-video="https://agenttix.kapsi.fi/fileshare/phd-presentations/infant-universe-blows-bubbles.webm"
+						data-background-video-loop data-background-video-muted
+						style="color: white;"
+				>
 					<h2>Phase transitions in the early universe</h2>
+					<div class="fragment fade-in" data-fragment-index="1">
+						<div class="fragment fade-out" data-fragment-index="4">
+							<img src="../fig/potential.svg" alt="Potential" style="width: 40%">
+							<ul>
+								<li class="fragment fade-in" data-fragment-index="2">First order: potential barrier<br>&rArr; phase boundary &rArr; bubble nucleation</li>
+								<li class="fragment fade-in" data-fragment-index="3">SM Higgs: crossover, BSM Higgs: first order<br>&rArr; Experimental testing of BSM theories</li>
+							</ul>
+						</div>
+					</div>
+					<div class="fragment fade-in" data-fragment-index="4">Fluid movement &rArr; sound waves &rArr; gravitational waves</div>
 				</section>
 				<!--
 				<section>
@@ -71,7 +86,8 @@
 					<h2>Self-similar hydrodynamics</h2>
 					<img class="r-stretch" src="../fig/relativistic_combustion.svg" alt="Relativistic combustion">
 					<ul class="small">
-						<li>Black: phase boundary</li>
+						<li>Self-similar: time-independent solution</li>
+						<li>Black circle: phase boundary, aka. bubble wall</li>
 						<li>Colour: velocity of moving plasma</li>
 						<li>$c_s$: speed of sound</li>
 						<li>$v_\text{w}$: wall speed</li>
@@ -85,7 +101,10 @@
 						<li>Based on the Sound Shell Model by Hindmarsh et al.</li>
 						<li>Simulation of a single expanding self-similar spherically symmetric bubble<br>&rArr; GW power spectrum</li>
 						<!-- T_n can be computed from alpha_n and the equation of state -->
-						<li>Key parameters: $v_\text{wall}, \alpha_n, r_*, (T_n),$<br>two of these: $p(T,\phi), e(T,\phi), s(T,\phi)$</li>
+						<li>
+							Key parameters: $v_\text{wall}, \alpha_n, r_*, T_n,$<br>
+							equation of state as two of these: $p(T,\phi), e(T,\phi), s(T,\phi)$
+						</li>
 					</ul>
 				</section>
 				<section data-visibility="hidden">
@@ -128,12 +147,20 @@
 						<div style="display: table-row">
 							<div style="display: table-cell">
 								Fluid shell velocity profiles
+								<ul style="font-size: 0.7em">
+									<li>Boundary conditions</li>
+									<li>ODE integration</li>
+								</ul>
 							</div>
 							<div style="display: table-cell">
-
 							</div>
 							<div style="display: table-cell">
 								GW spectra
+								<ul style="font-size: 0.7em">
+									<li>Sine transformation</li>
+									<li>Conversion to observable $f$ etc.</li>
+									<li>Experimentally testable by LISA</li>
+								</ul>
 							</div>
 						</div>
 					</div>
