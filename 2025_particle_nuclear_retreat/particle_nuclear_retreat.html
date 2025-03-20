@@ -1,0 +1,242 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<link rel="dns-prefetch" href="https://cdnjs.cloudflare.com/">
+		<link rel="dns-prefetch" href="https://agenttix.kapsi.fi/">
+
+		<title>Particle and Nuclear physics graduate student retreat slides</title>
+
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/5.1.0/reveal.min.css" integrity="sha512-0AUO8B5ll9y1ERV/55xq3HeccBGnvAJQsVGitNac/iQCLyDTGLUBMPqlupIWp/rJg0hV3WWHusXchEIdqFAv1Q==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/5.1.0/plugin/highlight/monokai.min.css" integrity="sha512-z8wQkuDRFwCBfoj7KOiu1MECaRVoXx6rZQWL21x0BsVVH7JkqCp1Otf39qve6CrCycOOL5o9vgfII5Smds23rg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/5.1.0/theme/moon.min.css" integrity="sha512-hWzyYMl/3xUkgV9CT1BFVHiO4wf+HzJPo6VhgcUEiLbjHiFJAjjBAeLeJdR3w12ylBtUx4n6IoczkJ6DSc6+4A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+		<style>
+			:root h2 {
+				--r-heading-text-transform: none;
+			}
+			.slides{
+				font-size: 0.8em;
+			}
+			.slides h1 {
+				font-size: 2em;
+			}
+			.small {
+				font-size: 0.7em;
+			}
+			footer {
+				position: absolute;
+				bottom: 5px;
+				left: 5px;
+				z-index: 100;
+				transition: visibility 0s, opacity 1s linear;
+				font-size: 0.5em;
+			}
+		</style>
+
+		<script defer src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+		<script defer src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/5.1.0/plugin/highlight/highlight.min.js" integrity="sha512-xkVKkN0o7xECTHSUZ9zdsBYRXiAKH7CZ3aICpW6aQJZsufVVRLhEBTDjTpC1tPzm+gNZiOeW174zXAB2fOLsTg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+		<script defer src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/5.1.0/plugin/math/math.min.js" integrity="sha512-r8CLLeBm1OZX6ll1USdj99rqbY3Y9no8A1YUMy0l/kk+KFnlsQT5E/8gEs59Q7BRta0jBOZVwLqvmlWtdBzrXw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+		<script defer id="revealjs" src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/5.1.0/reveal.min.js" integrity="sha512-sMRSj1Ns64C2OE6VNS7WrV63OHW7dLAvi96CXRoy9AEe/tKF+868fhUJpc5ZKS166lwhe2ArCYjFitLJUY+VWA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+	</head>
+	<body>
+		<div id="hidden" style="display:none;">
+			<div id="header">
+				<footer class="footer-bubbles" style="display: none">
+					<a href="https://www.youtube.com/watch?v=mfGL8CpORPA" target="_blank">Video by David Weir</a>
+				</footer>
+                <footer class="footer-lisa" style="display: none">
+                    <a href="https://www.youtube.com/watch?v=GUyRKOex7rU" target="_blank">Video by Anna Kormu</a>
+                </footer>
+            </div>
+		</div>
+		<div class="reveal">
+			<div class="slides">
+				<section>
+					<h1>Generating gravitational wave spectra from equations of state for phase transitions in the early universe</h1>
+					<p>Mika Mäki, Doctoral Researcher,<br>Computational Field Theory group, University of Helsinki</p>
+					<p>21.3.2025</p>
+				</section>
+				<section
+						id="bubble-video"
+						data-background-video="https://agenttix.kapsi.fi/fileshare/phd-presentations/infant-universe-blows-bubbles.webm"
+						data-background-video-loop data-background-video-muted
+						style="color: white;"
+				>
+					<h2>Phase transitions in the early universe</h2>
+					<div class="fragment fade-in" data-fragment-index="1">
+						<div class="fragment fade-out" data-fragment-index="4">
+							<img src="../fig/potential.svg" alt="Potential" style="width: 40%">
+							<div style="display: inline-block; border: 1px solid grey; background-color: black; padding-right: 5px">
+								<ul>
+									<li class="fragment fade-in" data-fragment-index="2">First-order: potential barrier<br>&rArr; phase boundary &rArr; bubble nucleation</li>
+									<li class="fragment fade-in" data-fragment-index="3">SM Higgs: crossover, BSM Higgs: first-order<br>&rArr; Experimental testing of BSM theories</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<div class="fragment fade-in" data-fragment-index="4" style="display: inline-block; border: 1px solid grey; background-color: black; padding-left: 5px; padding-right: 5px">Fluid movement &rArr; sound waves &rArr; gravitational waves</div>
+				</section>
+				<!--
+				<section>
+					<iframe class="r-stretch" data-src="https://www.youtube-nocookie.com/embed/mfGL8CpORPA?si=YikXa6wWHNHvwRah&autoplay=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+				</section>
+				<section data-background-iframe="https://www.youtube-nocookie.com/embed/mfGL8CpORPA?si=YikXa6wWHNHvwRah&autoplay=1"></section>
+				-->
+				<section>
+					<h2>Self-similar hydrodynamics</h2>
+					<img class="r-stretch" src="../fig/relativistic_combustion.svg" alt="Relativistic combustion">
+					<ul class="small">
+						<li>Self-similar: time-independent solution</li>
+						<li>Black circle: phase boundary, aka. bubble wall</li>
+						<li>Colour: velocity of moving plasma</li>
+						<li>$c_s$: speed of sound</li>
+						<li>$v_\text{w}$: wall speed</li>
+						<li>$c_\text{J}$: Chapman-Jouguet speed</li>
+					</ul>
+				</section>
+				<section>
+					<h2>PTtools: GW spectra from equations of state</h2>
+					<ul>
+						<li>Python-based simulation framework</li>
+						<li>Based on the Sound Shell Model by Hindmarsh et al.</li>
+						<ul>
+							<li>Computationally efficient compared to lattice simulations</li>
+						</ul>
+						<li>Simulation of a single expanding self-similar spherically symmetric bubble<br>&rArr; GW power spectrum</li>
+						<!-- T_n can be computed from alpha_n and the equation of state -->
+						<li>
+							Key parameters from particle physics: $v_\text{wall}, \alpha_n, r_*, T_n,$<br>
+							equation of state: $p(T,\phi)$
+						</li>
+					</ul>
+				</section>
+				<section data-visibility="hidden">
+					<h2>General equation of state</h2>
+					<ul>
+						<li>General equation of state: $p(T,\phi) = \frac{\pi^2}{90} g_p(T) T^4 - V(T,\phi)$</li>
+						<ul>
+							<li>Sound speed $c_s \equiv \frac{dp}{de} \neq \frac{1}{\sqrt{3}}$</li>
+						</ul>
+					</ul>
+				</section>
+				<section data-visibility="hidden">
+					<h2>PTtools</h2>
+					<ul>
+						<li>Python-based simulation framework</li>
+						<li>Based on the Sound Shell Model</li>
+						<ul>
+							<li>Single bubble</li>
+						</ul>
+						<div>
+							<img src="../fig/pttools-dev.svg" alt="PTtools"><br>
+							PTtools repository
+						</div>
+					</ul>
+				</section>
+				<section>
+					<h2>From fluid profiles to GW spectra</h2>
+					<div style="display: table">
+						<div style="display: table-row">
+								<div style="display: table-cell; width: 48%">
+								<img src="../2025_nordic_cosmology_meeting/bubbles.svg" alt="Bubbles">
+							</div>
+							<div style="display: table-cell; text-align: center; vertical-align: middle;">
+								<h2>&#129070;</h2>
+							</div>
+							<div style="display: table-cell; width: 48%">
+								<img src="../2025_nordic_cosmology_meeting/spectra.svg" alt="Spectra">
+							</div>
+						</div>
+						<div style="display: table-row">
+							<div style="display: table-cell">
+								Fluid shell velocity profiles
+								<ul style="font-size: 0.7em">
+									<li>Boundary conditions</li>
+									<li>ODE integration</li>
+								</ul>
+							</div>
+							<div style="display: table-cell">
+							</div>
+							<div style="display: table-cell">
+								GW spectra
+								<ul style="font-size: 0.7em">
+									<li>Sine transform</li>
+									<li>Conversion to observable $f$ etc.</li>
+									<li>Experimentally testable by LISA</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</section>
+				<section
+					id="lisa-video"
+					data-background-video="https://agenttix.kapsi.fi/fileshare/phd-presentations/lisa-orbiting-the-sun.webm"
+					data-background-video-loop data-background-video-muted
+					style="color: white;"
+				>
+					<h2>Detection of primordial gravitational waves</h2>
+					<ul>
+						<li class="fragment fade-in">LISA: Laser Interferometer Space Antenna</li>
+						<ul>
+							<li class="fragment fade-in">Will be launched in the 2030s</li>
+						</ul>
+						<li class="fragment fade-in">Three satellites connected by 2.5 million kilometer long laser beams</li>
+						<li class="fragment fade-in">Measures gravitational waves at milli-Hertz frequencies</li>
+						<li class="fragment fade-in">"Listening to the sound of a cosmic kettle"</li>
+						<li class="fragment fade-in">Direct testing and comparison of particle physics theories beyond the Standard Model</li>
+					</ul>
+					<h2 class="fragment fade-in">Thank you!</h2>
+				</section>
+				<section data-visibility="uncounted">
+					<h2>Fluid velocity spectra</h2>
+					<img class="r-stretch" src="../fig/const_cs_gw_v.svg" alt="Velocity spectra">
+				</section>
+				<section data-visibility="uncounted">
+					<h2>Gravitational wave power spectra</h2>
+					<img class="r-stretch" src="../fig/const_cs_gw.svg" alt="GW power spectra">
+				</section>
+			</div>
+		</div>
+		<script type="text/javascript">
+			revealjs.addEventListener("load", () => {
+				Reveal.initialize({
+					hash: true,
+
+					// Learn about plugins: https://revealjs.com/plugins/
+					// plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
+					plugins: [ RevealMath.MathJax3, RevealHighlight ],
+					// showSlideNumber: "all"
+				});
+
+				// https://stackoverflow.com/a/37518822
+				const header = $('#header').html();
+				if ( window.location.search.match( /print-pdf/gi ) ) {
+					Reveal.addEventListener( 'ready', function( event ) {
+						$('.slide-background').append(header);
+					});
+				}
+				else {
+					$('div.reveal').append(header);
+				}
+
+				Reveal.on("slidechanged", (event) => {
+					const footer_bubbles = $(".footer-bubbles");
+					const footer_lisa = $(".footer-lisa");
+					if (event.currentSlide.id === "bubble-video") {
+						footer_bubbles.css({"display": "", "visibility": "visible", "opacity": 1});
+						footer_lisa.css({"display": "none", "visibility": "hidden", "opacity": 0});
+					} else if (event.currentSlide.id === "lisa-video") {
+						footer_bubbles.css({"display": "none", "visibility": "hidden", "opacity": 0});
+						footer_lisa.css({"display": "", "visibility": "visible", "opacity": 1});
+					}
+					else {
+						footer_bubbles.css({"display": "none", "visibility": "hidden", "opacity": 0});
+						footer_lisa.css({"display": "none", "visibility": "hidden", "opacity": 0});
+					}
+				});
+			});
+		</script>
+	</body>
+</html>
