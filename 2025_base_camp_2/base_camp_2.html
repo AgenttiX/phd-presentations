@@ -100,6 +100,81 @@
 					</ul>
 					<h2 class="fragment fade-in">Thank you!</h2>
 				</section>
+				<section data-visibility="uncounted">
+					<h2>Self-similar hydrodynamics</h2>
+					<img class="r-stretch" src="../fig/relativistic_combustion.svg" alt="Relativistic combustion">
+					<ul class="small">
+						<li>Self-similar: time-independent solution</li>
+						<li>Black circle: phase boundary, aka. bubble wall</li>
+						<li>Colour: velocity of moving plasma</li>
+						<li>$c_s$: speed of sound</li>
+						<li>$v_\text{w}$: wall speed</li>
+						<li>$c_\text{J}$: Chapman-Jouguet speed</li>
+					</ul>
+				</section>
+				<section data-visibility="uncounted">
+					<h2>From fluid profiles to GW spectra</h2>
+					<div style="display: table">
+						<div style="display: table-row">
+								<div style="display: table-cell; width: 48%">
+								<img src="../2025_nordic_cosmology_meeting/bubbles.svg" alt="Bubbles">
+							</div>
+							<div style="display: table-cell; text-align: center; vertical-align: middle;">
+								<h2>&#129070;</h2>
+							</div>
+							<div style="display: table-cell; width: 48%">
+								<img src="../2025_nordic_cosmology_meeting/spectra.svg" alt="Spectra">
+							</div>
+						</div>
+						<div style="display: table-row">
+							<div style="display: table-cell">
+								Fluid shell velocity profiles
+								<ul style="font-size: 0.7em">
+									<li>Boundary conditions</li>
+									<li>ODE integration</li>
+								</ul>
+							</div>
+							<div style="display: table-cell">
+							</div>
+							<div style="display: table-cell">
+								GW spectra
+								<ul style="font-size: 0.7em">
+									<li>Sine transform</li>
+									<li>Conversion to observable $f$ etc.</li>
+									<li>Experimentally testable by LISA</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</section>
+				<section data-visibility="uncounted">
+					<h2>How to use PTtools</h2>
+					<pre style="display: inline-block; width: 85%">
+						<code data-trim data-noescape data-line-numbers="1-4|6-7|8-12|13|15-16|1-16">
+							from pttools.analysis import plot_spectra_omgw0, plot_bubbles_v
+							from pttools.bubble import Bubble
+							from pttools.models import ConstCSModel
+							from pttools.omgw0 import Spectrum
+
+							alpha_n = 0.2
+							model = ConstCSModel(css2=1/3, csb2=1/4, alpha_n_min=alpha_n)
+							bubbles = [
+								Bubble(model, v_wall=0.3, alpha_n=alpha_n),
+								Bubble(model, v_wall=0.5, alpha_n=alpha_n),
+								Bubble(model, v_wall=0.9, alpha_n=alpha_n)
+							]
+							spectra = [Spectrum(bubble, r_star=0.1, Tn=200) for bubble in bubbles]
+
+							plot_bubbles_v(bubbles, path="bubbles.svg", v_max=0.5)
+							plot_spectra_omgw0(spectra, path="spectra.svg")
+						</code>
+					</pre>
+					<div style="display: inline-block; width: 14%; text-align: center; font-size: 0.4em">
+						<img src="../fig/pttools-dev.svg" alt="PTtools" style="margin: 0"><br>
+						PTtools repository<br>
+						<a href="https://github.com/CFT-HY/pttools">https://github.com/CFT-HY/pttools</a>
+					</div>
+				</section>
             </div>
         </div>
 	<script type="text/javascript">
