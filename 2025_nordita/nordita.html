@@ -1,1 +1,630 @@
-Todo
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<link rel="dns-prefetch" href="https://cdnjs.cloudflare.com/">
+		<link rel="dns-prefetch" href="https://agenttix.kapsi.fi/">
+        <link rel="dns-prefetch" href="https://www.ptplot.org/">
+
+		<title>Nordita 2025 presentation</title>
+
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/5.2.1/reveal.min.css" integrity="sha512-ZIo9ivf88U0L1S+0D/npMNTTkjez5B9cK5xIecN4IA2OmtbTNBbPAZo/0cBC195sq7FU7cEOVPwtit37f/+1rQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/5.2.1/plugin/highlight/monokai.min.css" integrity="sha512-z8wQkuDRFwCBfoj7KOiu1MECaRVoXx6rZQWL21x0BsVVH7JkqCp1Otf39qve6CrCycOOL5o9vgfII5Smds23rg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/5.2.1/theme/sky.min.css" integrity="sha512-gLymIttr2gq642OBM4g7Oab3Bx3J1XB1TSbP5DZqcXaDWULMmSHHHkXFdRsx4lMFmt9705mNRozs1qeSvOAJpw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+		<style>
+			:root h2 {
+				--r-heading-text-transform: none;
+			}
+            .slide-number {
+                font-size: 1em !important;
+            }
+			.slides{
+				font-size: 0.9em;
+			}
+			.slides h1 {
+				font-size: 2em;
+			}
+			.small {
+				font-size: 0.7em;
+			}
+            .todo {
+                border: 1px solid red;
+                color: red;
+            }
+            aside.controls {
+                margin-right: 140px !important;
+            }
+			footer {
+				position: absolute;
+				bottom: 5px;
+				left: 5px;
+				z-index: 100;
+				transition: visibility 0s, opacity 1s linear;
+				font-size: 0.5em;
+			}
+            /*
+            section {
+                font-size: 0.8em;
+            }
+            */
+		</style>
+
+		<script defer src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+		<script defer src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/5.2.1/plugin/highlight/highlight.min.js" integrity="sha512-IkPzJ3njtxNL2Frm7zr18CEj9HH+CEFAqh+jSKjXTHVFGtWG1+USbIXINU8zdGmyLpf/OBIVfpNLGNgwhlymkA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+		<script defer src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/5.2.1/plugin/math/math.min.js" integrity="sha512-tdpe8NdPiaypY/eUgKqr/aL5y0tLiFEde/joBsD4bfjyB8yNuGsReuN/D+XDcGbHQ8/xbDbJ0mqkfGdh2JxCAw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+		<script defer src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/5.2.1/plugin/notes/notes.min.js" integrity="sha512-6LAcdj7pQal9JkdALNexzVKd4zWuYUxOXuzdF21iOx7LJSlF5ibFi2TAR7GQ00XhfPAw7/R8f1dZ69gFGhzXtw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <script defer id="revealjs" src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/5.2.1/reveal.min.js" integrity="sha512-lRYVCjdH7dCPCzqLL6eBn78p6WGK5pZxgYBgzTQfWlfX7yiZFLt/qHOMSETHUIz2aZIU/KbjwYHiMsmrcVgJnA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+	</head>
+	<body>
+		<div id="hidden" style="display:none;">
+			<div id="header">
+				<footer style="display: none">
+					<a href="https://www.youtube.com/watch?v=mfGL8CpORPA" target="_blank">Video by David Weir</a>
+				</footer>
+			</div>
+		</div>
+		<div class="reveal">
+			<div class="slides">
+				<section>
+					<h1>Generating gravitational wave spectra from phase transitions with realistic equations of state</h1>
+					<p>Mika Mäki, Doctoral Researcher,<br>Computational Field Theory group, University of Helsinki</p>
+					<p>8.8.2025</p>
+				</section>
+				<section>
+					<h2>Contents of the talk</h2>
+					<ul>
+						<li>Introduction: Types of simulations</li>
+                        <li>
+                            Hydrodynamics
+                            <ul>
+                                <li>Dimensionality of the problem</li>
+                                <li>Wave equation</li>
+                                <li>Phase boundary</li>
+                                <li>Hydrodynamic equations</li>
+                                <li>Fluid shell types</li>
+                            </ul>
+                        </li>
+                        <li>Equations of state</li>
+                        <li>
+                            Sound Shell Model
+                            <ul>
+                                <li>Correction factors</li>
+                            </ul>
+                        </li>
+                        <li>
+                            Simulation software
+                            <ul>
+                                <li>PTtools</li>
+                                <li>PTPlot</li>
+                            </ul>
+                        </li>
+					</ul>
+				</section>
+				<section
+						id="bubble-video"
+						data-background-video="https://agenttix.kapsi.fi/fileshare/phd-presentations/infant-universe-blows-bubbles.webm"
+						data-background-video-loop data-background-video-muted
+						style="color: white;"
+				>
+					<div class="fragment fade-in" style="display: inline-block; border: 1px solid grey; background-color: black; opacity: 0.8; padding: 20px" data-fragment-index="1">
+						<h2 style="color: white">Different types of phase transition simulations</h2>
+                        <ul>
+							<li class="fragment fade-in" data-fragment-index="2">Lattice simulations
+								<ul>
+									<li>Capture multiple types of effects: bubble expansion, collision and turbulence</li>
+									<li>Computationally expensive</li>
+								</ul>
+							</li>
+							<li class="fragment fade-in" data-fragment-index="3">Analytical approximations
+								<ul>
+									<li>Broken power law, double broken power law</li>
+									<li>Useful but rather crude approximations</li>
+								</ul>
+							</li>
+							<li class="fragment fade-in" data-fragment-index="4">Semi-analytical approximation: Sound Shell Model
+								<ul>
+									<li>Captures dependence on phase transition parameters</li>
+									<li>Reproduces the results of lattice simulations for intermediate-strength transitions</li>
+								</ul>
+							</li>
+						</ul>
+					</div>
+				</section>
+                <section>
+                    <h2>Dimensionality of the problem</h2>
+                    <div style="display: flex">
+                        <div style="flex: 1; padding-top: 0.5em">
+                            <ul>
+                                <li>We investigate the expansion of a single bubble</li>
+                                <li>
+                                    Self-similarity
+                                    <ul>
+                                        <li>Friction results in a constant wall speed $v_\text{wall}$</li>
+                                        <li>As the bubble expands, its relative shape stays the same</li>
+                                        <li>&rarr; Time-independent solution</li>
+                                    </ul>
+                                </li>
+                                <li>Spherical symmetry</li>
+                                <li>3+1 dimensional problem reduces to time-independent 1D</li>
+                            </ul>
+                        </div>
+                        <div style="flex: 1">
+                            <img src="../fig/relativistic_combustion.svg#svgView(viewBox(0, 80, 370, 370))" alt="Relativistic combustion" style="width: 500px; height: 500px">
+                        </div>
+                    </div>
+                </section>
+                <section>
+                    <h2>Wave equation</h2>
+                    <ul>
+                        <li>Constant background space-time &rarr; energy-momentum conservation $\nabla_\mu T^{\mu\nu} = 0$</li>
+                        <li>
+                            Energy-momentum tensor of an ideal fluid
+                            $$T^{\mu \nu}_f = (e+p) u^\mu u^\nu + p g^{\mu \nu}$$
+                        </li>
+                        <li>
+                            For a one-dimensional flow in Cartesian coordinates
+                            $$\begin{align}
+                                \partial_t \left[ (e+pv^2) \gamma^2 \right] + \partial_x \left[ (e+p) \gamma^2 v \right] &= 0,
+                                \label{eq:ep_conservation_1d_1} \\
+                                \partial_t \left[ (e+p) \gamma^2 v \right] + \partial_x \left[ (ev^2 + p) \gamma^2 \right] &= 0
+                                \label{eq:ep_conservation_1d_2}
+                            \end{align}$$
+                        </li>
+                        <li>
+                            First-order perturbation &rarr; wave equation with a speed of sound
+                            $$\partial_t^2 (\delta e) - \frac{\delta p}{\delta e} \partial_x^2(\delta e) = 0
+                            \qquad
+                            c_s^2 \equiv \frac{dp}{de} = \frac{dp/dT}{de/dT}$$
+                        </li>
+                    </ul>
+                </section>
+                <section>
+                    <h2>Phase boundary</h2>
+                    <ul>
+                        <li>
+                            Energy-momentum conservation
+                            $$\nabla_\mu T^{\mu\nu} = 0
+                            \quad \Rightarrow \quad
+                            \partial_z T^{zz} = \partial_z T^{z0} = 0$$
+                        </li>
+                        <li>
+                            Inserting ideal fluid $T^{\mu \nu}_f = (e+p) u^\mu u^\nu + p g^{\mu \nu}$ &rarr; junction conditions
+                            $$\begin{align}
+                                w_- \tilde{\gamma}_-^2 \tilde{v}_- &= w_+ \tilde{\gamma}_+^2 \tilde{v}_+
+                                \label{eq:junction_condition_1} \\
+                                w_- \tilde{\gamma}_-^2 \tilde{v}_-^2 + p_- &= w_+ \tilde{\gamma}_+^2 \tilde{v}_+^2 + p_+
+                                \label{eq:junction_condition_2}
+                            \end{align}$$
+                        </li>
+                        <li>
+                            By defining new variables $\theta = \frac{1}{4}(e-3p), \quad \textcolor{red}{\alpha_+} \equiv \frac{4}{3} \frac{\theta_+(w_+) - \theta_-(w_-)}{w_+}$ <!--, \quad r = \frac{w_+}{w_-}$ -->
+                            $$\begin{align}
+                                \tilde{v}_+ &= \frac{1}{2(1+\textcolor{red}{\alpha_+})}\left[ \left(\frac{1}{3\tilde{v}_-}+\tilde{v}_-\right) \pm \sqrt{\left(\frac{1}{3\tilde{v}_-} - \tilde{v}_- \right)^2 + 4\textcolor{red}{\alpha_+}^2 + \frac{8}{3} \textcolor{red}{\alpha_+}} \right],
+                                \label{eq:v_tilde_plus}
+                                \\
+                                \tilde{v}_- &= \frac{1}{2} \left[ \left( (1+\textcolor{red}{\alpha_+})\tilde{v}_+ + \frac{1-3\textcolor{red}{\alpha_+}}{3\tilde{v}_+} \right) \pm \sqrt{\left((1+\textcolor{red}{\alpha_+})\tilde{v}_+ + \frac{1-3\textcolor{red}{\alpha_+}}{3\tilde{v}_+} \right)^2 - \frac{4}{3}} \right).
+                                \label{eq:v_tilde_minus}
+                            \end{align}$$
+                        </li>
+                    </ul>
+                </section>
+                <section>
+                    <h2>Hydrodynamic equations</h2>
+                    <ul>
+                        <li>Energy-momentum conservation $\nabla_\mu T^{\mu\nu} = 0$</li>
+                        <li>
+                            Projection &rarr; hydrodynamic equations away from the phase boundary
+                            $$\begin{align}
+                                0 &= u_\mu \partial_\nu T^{\mu \nu} = -\partial_\mu (w u^\mu) + u^\mu \partial_\mu p, \\
+                                0 &= \bar{u}_\mu \partial_\nu T^{\mu \nu} = w \bar{u}^\nu u^\mu \partial_\mu u_\nu + \bar{u}^\mu \partial_\mu p.
+                            \end{align}$$
+                        </li>
+                        <li>
+                            Using self-similarity $\xi = \frac{r}{t}$ and parametrising
+                            $$\begin{align}
+                                \frac{d\xi}{d\tau} &= \xi \left[ (\xi - v)^2 - c_s^2 (1 - \xi v)^2 \right], \\
+                                \frac{dv}{d\tau} &= 2 v c_s^2 (1 - v^2) (1 - \xi v), \\
+                                \frac{dw}{d\tau} &= w \left( 1 + \frac{1}{c_s^2} \right) \gamma^2 \mu \frac{dv}{d\tau}.
+                            \end{align}$$
+                        </li>
+                        <li>Note that $c_s^2$ is computed using user-provided functions</li>
+                    </ul>
+                </section>
+				<section>
+					<h2>Fluid shells</h2>
+					<img class="r-stretch" src="../fig/relativistic_combustion.svg" alt="Relativistic combustion">
+                    <div style="display: inline-block; width: 40%; text-align: left; vertical-align: top">
+                        Three types of solutions, determined by<br>
+                        <ul>
+                            <li>Wall velocity $v_\text{wall}$</li>
+                            <li>Transition strength $\alpha_n$</li>
+                            <li>Speed of sound $c_s(T,\phi)$</li>
+                        </ul>
+                    </div>
+                    <div style="display: inline-block; width: 45%; text-align: left; vertical-align: top">
+                        Explanation of the figure<br>
+                        <ul>
+                            <li>Black circle: phase boundary, aka. bubble wall</li>
+                            <li>Colour: velocity of moving plasma</li>
+                            <li>$c_s$: speed of sound</li>
+                            <li>$v_\text{w}$: wall speed</li>
+                            <li>$c_\text{J}$: Chapman-Jouguet speed</li>
+                        </ul>
+                    </div>
+				</section>
+				<section>
+					<h2>General equation of state</h2>
+					<ul>
+                        <li>
+                            Equation of state for an ultrarelativistic plasma with multiple degrees of freedom
+                            $$p(T,\phi) = \frac{\pi^2}{90} g_p(T,\phi) T^4 - V(T,\phi)$$</li>
+                        </li>
+                        <li>
+                            The rest can be deduced with thermodynamics
+                            <ul>
+                                <li>Entropy density $s = \frac{dp}{dT}$</li>
+                                <li>Enthalpy density $w = Ts$</li>
+                                <li>Energy density $e = w - p$</li>
+                                <li>Sound speed $c_s \equiv \sqrt{\frac{dp}{de}}$</li>
+                            </ul>
+                        </li>
+                    </ul>
+				</section>
+                <section>
+                    <h2>Simple equations of state</h2>
+                    <ul>
+                        <li>
+                            Bag model: equation of state with constant degrees of freedom
+                            $$g_\pm = \frac{90}{\pi^2} a_\pm \quad \Rightarrow \quad p_\pm = a_\pm T^4 - V_\pm, \quad c_s^2 \equiv \frac{dp}{de} = \frac{1}{3}$$
+                        </li>
+                        <li>
+                            Constant sound speed model (aka. $\mu, \nu$ model or template model)
+                            $$\begin{align}
+                            g_{p\pm} &= \frac{90}{\pi^2} a_\pm \left( \frac{T}{T_0} \right)^{\mu_\pm - 4} \\
+                            \Rightarrow \quad
+                            p_\pm &= a_\pm \left( \frac{T}{T_0} \right)^{\mu_\pm - 4} T^4 - V_\pm {\color{gray} \approx a_\pm T^{\mu_\pm} - V_\pm } \\
+                            c_{s\pm}^2 &= \frac{1}{\mu_\pm - 1}
+                            \end{align}$$
+                        </li>
+                    </ul>
+                </section>
+                <section>
+                    <h2>Equation of state from an arbitrary particle physics model</h2>
+                    <ul>
+                        <li>Non-constant degrees of freedom &rarr; varying speed of sound $c_s(T,\phi)$</li>
+                        <li>
+                            The equation of state can be constructed from $V(T,\phi), \ g_p(T,\phi)$ and preferably also $g_e(T,\phi)$ or $g_s(T,\phi)$
+                            $$\begin{align}
+                            g_p &= 4g_s - 3g_e \\
+                            e(T,\phi) &= \frac{\pi^2}{30} g_e(T,\phi) T^4 + V(T, \phi) \\
+                            p(T,\phi) &= \frac{\pi^2}{90} g_p(T,\phi) T^4 - V(T, \phi) \\
+                            s(T,\phi) &= \frac{2\pi^2}{45} g_s(T,\phi) T^3
+                            \end{align}$$
+                        </li>
+                        <li>This can also be done with e.g. <a href="https://wallgo.readthedocs.io/" target="_blank">WallGo</a></li>
+                    </ul>
+                </section>
+                <section>
+					<h2>Sound Shell Model</h2>
+					<ul>
+						<li>
+                            <a href="https://arxiv.org/abs/1608.04735" target="_blank">Hindmarsh (2018)</a>,
+                            <a href="https://arxiv.org/abs/1909.10040" target="_blank">Hindmarsh & Hijazi (2019)</a>
+                        </li>
+                        <li>
+                            When the transition strength $\alpha_n \ll 1$ and $v_\text{wall} < 1$
+                            <ul>
+                                <li>Sound waves are the majority contribution: $\Omega_{gw} = \textcolor{gray}{\Omega_{collisions}} + \Omega_{sw} + \textcolor{gray}{\Omega_{turbulence}}$</li>
+                                <li>Collisions and turbulence can be neglected &rarr; no interaction between the bubbles</li>
+                            </ul>
+                        </li>
+                        <li>After the bubbles have merged, the fluid shells continue as sound waves</li>
+                        <li>
+                            The velocity field is the superposition of the individual bubbles that have
+                            $v(\xi), e(\xi), w(\xi)$ <!--, \lambda \equiv \frac{e(\xi) - \bar{e}}{\bar{w}}$ -->
+                        </li>
+                        <li>
+                            Sine transformation to wavenumber space
+                            <!-- $f(z) = \frac{4\pi}{z} \int_0^\infty d\xi v_\text{ip}(\xi) \sin(z\xi), \quad
+                            l(z) \equiv \frac{4 \pi}{z} \int_0^\infty d\xi \lambda_\text{ip}(\xi) \sin(z\xi)$ -->
+                            &rarr; wavefunction launched by a single bubble $A(z)$ <!-- $A(z) \equiv \frac{1}{2} \left( f'(z) + i c_s l(z) \right)$ --></li>
+                        <li>Superposition of bubbles &rarr; plane wave components of the velocity field $P_v(z)$</li>
+                        <li>Shear stress in the fluid &rarr; unequal time correlator (UETC) of the shear stress, $U_\Pi$</li>
+                        <!-- <li>&rarr; Spectral density $P_\dot{h}$ of the time derivative of the metric perturbation$\dot{h}$</li> -->
+                        <li>&rarr; GW power spectrum $\mathcal{P}_{gw}(z)$</li>
+                        <li>Conversion from $z$ to $f$: $\mathcal{P}_{gw}(z)$ &rarr; $\Omega_{gw,0}(f)$</li>
+                        <li>Together: $(v(\xi), e(\xi), w(\xi)) \rightarrow A(z) \rightarrow P_v \rightarrow U_\pi \rightarrow \mathcal{P}_{gw}(z) \rightarrow \Omega_{gw,0}(f)$</li>
+                        <!--
+                        <li>
+                            GW power spectrum from the fluid shear stress unequal time correlator (UETC) $U_\Pi$
+                            $$\mathcal{P}_{gw}(k) = \frac{1}{12 H^2} \frac{k^3}{2 \pi^2} P_\dot{h}$$
+                            $$P_\dot{h} = (16 \pi G)^2 \frac{1}{2} \int_0^t dt_1 \int_0^t dt_2 \cos(k(t_1 - t_2)) U_\Pi(k, t_1, t_2)$$
+                        </li>
+                        -->
+					</ul>
+				</section>
+                <section>
+                    <h2>Correction factors</h2>
+                    <div style="display: inline-block; width: 70%">
+                        <ul>
+                            <li>
+                                <a href="https://arxiv.org/abs/2409.01426" target="_blank">Giombi et al. (2024)</a>:
+                                Changing the sound speed &rarr; source lifetime factor $\Lambda$<br>
+                                $$\begin{align}
+                                \tilde{P}_\text{gw,corr.}(k) &\equiv \Lambda \tilde{P}_\text{gw}(k) &
+                                \Lambda &\equiv \frac{1}{1 + 2\nu} \left(1 - \left(1 + \frac{\Delta \eta}{\eta_*} \right) \right)^{-1-2\nu} \\
+                                \nu_\text{gdh2024} &\equiv \frac{1-3\omega}{1 + 3\omega} &
+                                \omega(T,\phi) &\equiv \frac{p(T,\phi)}{e(T,\phi)} \quad \textcolor{gray}{\omega_\text{bag} = \frac{1}{3} \rightarrow \nu_\text{bag} = 0}
+                                \end{align}$$
+                            </li>
+                            <li>
+                                <a href="https://arxiv.org/abs/2106.05984" target="_blank">Gowling & Hindmarsh (2021)</a>: Suppression factor
+                                <ul>
+                                    <li>From comparison with 3D hydrodynamic simulations</li>
+                                </ul>
+                                $$\Omega_\text{gw} = \Sigma(v_\text{w},\alpha_n) \Omega_\text{gw}^\text{ssm}(z)$$
+                            </li>
+                            <li>
+                                <a href="https://arxiv.org/abs/2409.01426" target="_blank">Giombi et al. (2024)</a>
+                                <ul>
+                                    <li>Low-frequency tail of the spectrum</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                    <img src="./suppression_no_hybrids_ext_cropped.svg" alt="Suppression" style="display: inline-block; width: 28%; position: absolute; top: 450px; right: 30px">
+                </section>
+                <section>
+                    <h2>PTtools: From equations of state to GW spectra</h2>
+                    <ul>
+                        <li>Python-based simulation framework</li>
+                        <li>
+                            Based on the Sound Shell Model by Hindmarsh et al.
+                            <ul>
+                                <li>Computationally efficient compared to lattice simulations</li>
+                            </ul>
+                        </li>
+                        <li>Developed by Mark Hindmarsh, Chloe Hopling & Mika Mäki</li>
+                        <li>
+                            Input
+                            <ul>
+                                <!-- T_n can be computed from alpha_n and the equation of state -->
+                                <li>Equation of state: $p(T,\phi)$</li>
+                                <li>Wall speed $v_\text{wall}$</li>
+                                <li>Transition strength parameter $\alpha_n \equiv \frac{4D\theta(T_n)}{3w_n} = \frac{4}{3} \frac{\theta_+(T_n) - \theta_-(T_n)}{w_n}$</li>
+                                <li>Hubble-scaled mean bubble spacing $r_* \equiv H_n R_*$</li>
+                            </ul>
+                        </li>
+                        <li>Output: GW power spectrum today $\Omega_{gw,0}(f)$</li>
+                        <li>Use case: estimate the likelihood of various Standard Model extensions with LISA data</li>
+                    </ul>
+                </section>
+                <section>
+                    <h2>Fluid shell algorithm: detonations</h2>
+                    <div style="display: flex">
+                        <div style="flex: 1; padding-top: 3em">
+                            <ul>
+                                <li>
+                                    Solve boundary conditions at the wall for known $w_+=w_n, v_+=0$
+                                    <ul>
+                                        <li>Using user-provided $p(T,\phi)$ &rarr; numerical solving</li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    Integrate from the wall to the fixed point at $v=0$
+                                    <ul>
+                                        <li>Using $c_s^2(w,\phi)$ based on user-provided functions &rarr; numerical ODE integration</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                        <div style="flex: 1">
+                            <img src="../fig/lecture_notes/shell_plot_vw_08_alphan_01_review.png" alt="Detonation" style="margin: 0; height: 800px">
+                        </div>
+                    </div>
+
+                </section>
+                <section>
+                    <h2>Fluid shell algorithm: deflagrations</h2>
+                    <div style="display: flex">
+                        <div style="flex: 1; padding-top: 3em">
+                            <ul>
+                                <li>Guess $w_-$, the enthalpy behind the wall</li>
+                                <li>Solve boundary conditions at the wall for $w_+, v_+$</li>
+                                <li>
+                                    Integrate to the shock
+                                    <ul>
+                                        <li>$v_{sh}(\xi)$ is computed from the boundary conditions &rarr; has to be found numerically</li>
+                                    </ul>
+                                </li>
+                                <li>Solve boundary conditions at the shock</li>
+                                <li>Check if $w=w_n$</li>
+                                <li>If not, change the enthalpy guess and try again</li>
+                            </ul>
+                        </div>
+                        <div style="flex: 1">
+                            <img src="../fig/lecture_notes/shell_plot_vw_04_alphan_01_review.png" alt="Deflagration" style="margin: 0; height: 800px">
+                        </div>
+                    </div>
+                </section>
+                <section>
+                    <h2>Fluid shell algorithm: hybrids</h2>
+                    <div style="display: flex">
+                        <div style="flex: 1; padding-top: 3em">
+                            <ul>
+                                <li>The same as for subsonic deflagrations, but with an additional integration behind the wall</li>
+                                <li style="color: gray">Guess $w_-$, the enthalpy behind the wall</li>
+                                <li style="color: gray">Solve boundary conditions at the wall for $w_+, v_+$</li>
+                                <li style="color: gray">Integrate to the shock</li>
+                                <li style="color: gray">Solve boundary conditions at the shock</li>
+                                <li style="color: gray">Check if $w=w_n$</li>
+                                <li style="color: gray">If not, change the enthalpy guess and try again</li>
+                                <li>Once the correct enthalpy has been found, integrate from the wall to the fixed point at $v=0$</li>
+                            </ul>
+                        </div>
+                        <div style="flex: 1">
+                            <img src="../fig/lecture_notes/shell_plot_vw_07_alphan_01_review.png" alt="Hybrid" style="margin: 0; height: 800px">
+                        </div>
+                    </div>
+                </section>
+				<section>
+					<h2>From fluid profiles to GW spectra</h2>
+					<div style="display: table; width: 100%">
+						<div style="display: table-row">
+                            <div style="display: table-cell; width: 48%">
+								<img src="../2025_nordic_cosmology_meeting/bubbles.svg" alt="Bubbles" style="width:100%">
+							</div>
+							<div style="display: table-cell; text-align: center; vertical-align: middle;">
+								<h2 style="font-size: 4em">&#129070;</h2>
+							</div>
+							<div style="display: table-cell; width: 48%">
+								<img src="../2025_nordic_cosmology_meeting/spectra.svg" alt="Spectra" style="width: 100%">
+							</div>
+						</div>
+						<div style="display: table-row">
+							<div style="display: table-cell">
+								<div style="font-size: 120%">Fluid shell velocity profiles</div>
+								<ul>
+									<li>Boundary conditions</li>
+									<li>ODE integration</li>
+								</ul>
+							</div>
+							<div style="display: table-cell">
+							</div>
+							<div style="display: table-cell">
+								<div style="font-size: 120%">GW spectra</div>
+								<ul>
+									<li>Sine transform</li>
+									<li>Conversion to observable $f$ etc.</li>
+									<li>Experimentally testable by LISA</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</section>
+				<section>
+					<h2>How to use PTtools</h2>
+                    How to generate the figures on the previous slide
+                    <div>
+                        <pre style="display: inline-block; width: 70%">
+                            <code data-trim data-noescape data-line-numbers="1-4|6-7|8-12|13|15-16|1-16">
+                                from pttools.analysis import plot_spectra_omgw0, plot_bubbles_v
+                                from pttools.bubble import Bubble
+                                from pttools.models import ConstCSModel
+                                from pttools.omgw0 import Spectrum
+
+                                alpha_n = 0.2
+                                model = ConstCSModel(css2=1/3, csb2=1/4, alpha_n_min=alpha_n)
+                                bubbles = [
+                                    Bubble(model, v_wall=0.3, alpha_n=alpha_n),
+                                    Bubble(model, v_wall=0.5, alpha_n=alpha_n),
+                                    Bubble(model, v_wall=0.9, alpha_n=alpha_n)
+                                ]
+                                spectra = [Spectrum(bubble, r_star=0.1, Tn=200) for bubble in bubbles]
+
+                                plot_bubbles_v(bubbles, path="bubbles.svg", v_max=0.5)
+                                plot_spectra_omgw0(spectra, path="spectra.svg")
+                            </code>
+                        </pre>
+                        <div style="display: inline-block; width: 29%; text-align: center;">
+                            <img src="../fig/pttools-docs.svg" alt="PTtools" style="margin: 0; width: 60%"><br>
+                            <a href="https://pttools.readthedocs.io/" target="_blank">https://pttools.readthedocs.io</a>
+                        </div>
+                    </div>
+				</section>
+                <section>
+					<h2>Fluid velocity profiles</h2>
+					<img class="r-stretch" src="../fig/const_cs_gw_v_1.svg" alt="Velocity profiles">
+				</section>
+                <section data-transition="none">
+					<h2>Fluid velocity profiles</h2>
+					<img class="r-stretch" src="../fig/const_cs_gw_v_2.svg" alt="Velocity profiles">
+				</section>
+                <section data-transition="none">
+                    <h2>GW power spectra</h2>
+                    <img class="r-stretch" src="../fig/const_cs_gw_1.svg" alt="GW power spectra">
+                </section>
+                <section data-transition="none">
+                    <h2>GW power spectra</h2>
+                    <img class="r-stretch" src="../fig/const_cs_gw_2.svg" alt="GW power spectra">
+                </section>
+                <section data-transition="none">
+					<h2>GW power spectra today</h2>
+					<img class="r-stretch" src="../fig/const_cs_gw_omgw0_1.svg" alt="GW power spectra today">
+				</section>
+                <section data-transition="none">
+					<h2>GW power spectra today</h2>
+					<img class="r-stretch" src="../fig/const_cs_gw_omgw0_2.svg" alt="GW power spectra today">
+				</section>
+                <section>
+                    <h2>PTPlot: Easy plotting of GW spectra</h2>
+                    <ul>
+                        <li>
+                            Online plotting utility
+                            <ul>
+                                <li>Based on the Python web framework Django</li>
+                                <li>Developed by David Weir, Deanna Hooper, Jenni Häkkinen & Mika Mäki</li>
+                            </ul>
+                        </li>
+                        <li>
+                            Supports several models for the GW spectrum
+                            <ul>
+                                <li>Broken power law</li>
+                                <li>Double broken power law (new)</li>
+                                <li>Sound Shell Model (new)</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </section>
+                <!-- <section data-background-iframe="https://www.ptplot.org/ptplot/" data-background-interactive></section> -->
+                <section data-background-iframe="http://localhost:8000" data-background-interactive></section>
+			</div>
+		</div>
+		<script type="text/javascript">
+			revealjs.addEventListener("load", () => {
+				Reveal.initialize({
+                    // Add the current slide number to the URL after a #
+					hash: true,
+
+					// Learn about plugins: https://revealjs.com/plugins/
+					plugins: [ RevealHighlight, RevealMath.MathJax3, RevealNotes ],
+
+                    // Show both current slide number and total number of slides
+					slideNumber: "c/t",
+
+                    // Disable automatic scaling and centering
+                    // disableLayout: true,
+
+                    width: 1920,
+                    height: 1080,
+
+                    // margin: 0.04,
+                    // minScale: 0.2,
+                    // maxScale: 2.0,
+				});
+
+				// https://stackoverflow.com/a/37518822
+				const header = $('#header').html();
+				if ( window.location.search.match( /print-pdf/gi ) ) {
+					Reveal.addEventListener( 'ready', function( event ) {
+						$('.slide-background').append(header);
+					});
+				}
+				else {
+					$('div.reveal').append(header);
+				}
+
+				Reveal.on("slidechanged", (event) => {
+					const footer = $("footer");
+					if (event.currentSlide.id === "bubble-video") {
+						footer.css({"display": "", "visibility": "visible", "opacity": 1});
+					} else {
+						footer.css({"display": "none", "visibility": "hidden", "opacity": 0});
+					}
+				});
+			});
+		</script>
+	</body>
+</html>
