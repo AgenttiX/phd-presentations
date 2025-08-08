@@ -16,9 +16,12 @@
 		<style>
 			:root h2 {
 				--r-heading-text-transform: none;
+                font-family: var(--r-main-font);
 			}
             .slide-number {
-                font-size: 1em !important;
+                font-size: 0.7em !important;
+                margin-bottom: 8px;
+                margin-right: 8px;
             }
 			.slides{
 				font-size: 0.9em;
@@ -34,7 +37,7 @@
                 color: red;
             }
             aside.controls {
-                margin-right: 140px !important;
+                margin-right: 115px !important;
             }
 			footer {
 				position: absolute;
@@ -49,6 +52,9 @@
                 font-size: 0.8em;
             }
             */
+            ul {
+                line-height: 1.4;
+            }
 		</style>
 
 		<script defer src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
@@ -204,7 +210,7 @@
                                 \tilde{v}_+ &= \frac{1}{2(1+\textcolor{red}{\alpha_+})}\left[ \left(\frac{1}{3\tilde{v}_-}+\tilde{v}_-\right) \pm \sqrt{\left(\frac{1}{3\tilde{v}_-} - \tilde{v}_- \right)^2 + 4\textcolor{red}{\alpha_+}^2 + \frac{8}{3} \textcolor{red}{\alpha_+}} \right],
                                 \label{eq:v_tilde_plus}
                                 \\
-                                \tilde{v}_- &= \frac{1}{2} \left[ \left( (1+\textcolor{red}{\alpha_+})\tilde{v}_+ + \frac{1-3\textcolor{red}{\alpha_+}}{3\tilde{v}_+} \right) \pm \sqrt{\left((1+\textcolor{red}{\alpha_+})\tilde{v}_+ + \frac{1-3\textcolor{red}{\alpha_+}}{3\tilde{v}_+} \right)^2 - \frac{4}{3}} \right).
+                                \tilde{v}_- &= \frac{1}{2} \left[ \left( (1+\textcolor{red}{\alpha_+})\tilde{v}_+ + \frac{1-3\textcolor{red}{\alpha_+}}{3\tilde{v}_+} \right) \pm \sqrt{\left((1+\textcolor{red}{\alpha_+})\tilde{v}_+ + \frac{1-3\textcolor{red}{\alpha_+}}{3\tilde{v}_+} \right)^2 - \frac{4}{3}} \right].
                                 \label{eq:v_tilde_minus}
                             \end{align}$$
                         </li>
@@ -507,6 +513,9 @@
 				<section>
 					<h2>How to use PTtools</h2>
                     How to generate the figures on the previous slide
+                    <pre style="width: fit-content">
+                        <code data-trim data-noescape style="padding: 8px">pip install pttools-gw</code>
+                    </pre>
                     <div>
                         <pre style="display: inline-block; width: 70%">
                             <code data-trim data-noescape data-line-numbers="1-4|6-7|8-12|13|15-16|1-16">
@@ -560,23 +569,29 @@
 				</section>
                 <section>
                     <h2>PTPlot: Easy plotting of GW spectra</h2>
-                    <ul>
-                        <li>
-                            Online plotting utility
-                            <ul>
-                                <li>Based on the Python web framework Django</li>
-                                <li>Developed by David Weir, Deanna Hooper, Jenni Häkkinen & Mika Mäki</li>
-                            </ul>
-                        </li>
-                        <li>
-                            Supports several models for the GW spectrum
-                            <ul>
-                                <li>Broken power law</li>
-                                <li>Double broken power law (new)</li>
-                                <li>Sound Shell Model (new)</li>
-                            </ul>
-                        </li>
-                    </ul>
+                    <div style="display: inline-block; width: 75%">
+                        <ul>
+                            <li>
+                                Online plotting utility
+                                <ul>
+                                    <li>Based on the Python web framework Django</li>
+                                    <li>Developed by David Weir, Deanna Hooper, Jenni Häkkinen & Mika Mäki</li>
+                                </ul>
+                            </li>
+                            <li>
+                                Supports several models for the GW spectrum
+                                <ul>
+                                    <li>Broken power law</li>
+                                    <li>Double broken power law (new)</li>
+                                    <li>Sound Shell Model (new)</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                    <div style="display: inline-block; width: 24%; text-align: center;">
+                            <img src="../fig/ptplot.svg" alt="PTPlot" style="margin: 0; width: 60%"><br>
+                            <a href="https://ptplot.org/" target="_blank">https://ptplot.org</a>
+                        </div>
                 </section>
                 <!-- <section data-background-iframe="https://www.ptplot.org/ptplot/" data-background-interactive></section> -->
                 <section data-background-iframe="http://localhost:8000" data-background-interactive></section>
