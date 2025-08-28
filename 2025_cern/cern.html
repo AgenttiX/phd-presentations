@@ -78,8 +78,14 @@
 			<div class="slides">
 				<section>
 					<h1>From equations of state to gravitational wave spectra </h1>
-					<p>Mika Mäki, Doctoral Researcher,<br>Computational Field Theory group, University of Helsinki</p>
-					<p>28.8.2025</p>
+					<p>
+                        Mika Mäki, Doctoral Researcher,<br>
+                        Computational Field Theory group, University of Helsinki
+                    </p>
+                    <p>
+                        Advancing gravitational wave predictions from cosmological first-order phase transitions<br>
+					    CERN, 28.8.2025
+                    </p>
 				</section>
 				<section
 						id="bubble-video"
@@ -137,7 +143,7 @@
                 </section>
                 -->
 				<section>
-					<h2>Fluid shells</h2>
+					<h2>Self-similar fluid shells</h2>
 					<img class="r-stretch" src="../fig/relativistic_combustion.svg" alt="Relativistic combustion" style="margin: 0">
                     <div class="small">
                         Source:
@@ -165,7 +171,7 @@
 				</section>
 				<section>
 					<h2>Equations of state</h2>
-                    <div style="display: inline-block; width: 80%; position: absolute; left: 0; font-size: 0.9em">
+                    <div style="display: inline-block; width: 75%; position: absolute; left: 0; font-size: 0.9em">
                         <ul>
                             <li>
                                 Equation of state for an ultrarelativistic plasma with multiple degrees of freedom
@@ -204,7 +210,7 @@
                                 </ul>
                             </li>
                         </ul>
-                    </div><div style="display: inline-block; width: 20%; position: absolute; top: 7em; right: 0">
+                    </div><div style="display: inline-block; width: 25%; position: absolute; top: 3em; right: 0">
                         <img src="./model.svg" alt="p(T)" style="width: 100%">
                     </div>
 				</section>
@@ -222,15 +228,7 @@
                             </ul>
                         </li>
                         <li>After the bubbles have merged, the fluid shells continue as sound waves</li>
-                        <li>
-                            The velocity field is the superposition of the individual bubbles that have
-                            $v(\xi), e(\xi), w(\xi)$ <!--, \lambda \equiv \frac{e(\xi) - \bar{e}}{\bar{w}}$ -->
-                        </li>
-                        <li>
-                            Sine transformation to wavenumber space
-                            <!-- $f(z) = \frac{4\pi}{z} \int_0^\infty d\xi v_\text{ip}(\xi) \sin(z\xi), \quad
-                            l(z) \equiv \frac{4 \pi}{z} \int_0^\infty d\xi \lambda_\text{ip}(\xi) \sin(z\xi)$ -->
-                            &rarr; wavefunction launched by a single bubble $A(z)$ <!-- $A(z) \equiv \frac{1}{2} \left( f'(z) + i c_s l(z) \right)$ --></li>
+                        <li>Sine transformation from fluid profile to wavenumber space</li>
                         <li>Superposition of bubbles &rarr; plane wave components of the velocity field $P_v(z)$</li>
                         <li>Shear stress in the fluid &rarr; unequal time correlator (UETC) of the shear stress, $U_\Pi$</li>
                         <!-- <li>&rarr; Spectral density $P_\dot{h}$ of the time derivative of the metric perturbation$\dot{h}$</li> -->
@@ -274,10 +272,12 @@
                                 </ul>
                             </li>
                         </ul>
-                    </div><div style="display: inline-block; width: 25%; position: absolute; right: 0">
-                        <img src="../2025_nordita/suppression_no_hybrids_ext_cropped.svg" alt="Suppression" style="width: 100%">
-                        <img src="../2025_nordita/suppression_no_hybrids_ext_cropped.svg" alt="Low-k" style="width: 100%">
-                        TODO replace this with a low-k figure
+                    </div><div style="display: inline-block; width: 35%; position: absolute; right: 0; text-align: right">
+                        <img src="../2025_nordita/suppression_no_hybrids_ext_cropped.svg" alt="Suppression" style="width: 70%; margin-bottom: 0">
+                        Suppression factor
+                        <br>
+                        <img src="./low_k.svg" alt="Low-k" style="width: 100%; margin-bottom: 0">
+                        Low-frequency tail
                     </div>
                 </section>
                 <section>
@@ -316,13 +316,13 @@
 					<div style="display: table; width: 100%">
 						<div style="display: table-row">
                             <div style="display: table-cell; width: 48%">
-								<img src="../2025_nordic_cosmology_meeting/bubbles.svg" alt="Bubbles" style="width:100%">
+								<img src="./bubbles.svg" alt="Bubbles" style="width:100%">
 							</div>
 							<div style="display: table-cell; text-align: center; vertical-align: middle;">
 								<h2 style="font-size: 4em">&#129070;</h2>
 							</div>
 							<div style="display: table-cell; width: 48%">
-								<img src="../2025_nordic_cosmology_meeting/spectra.svg" alt="Spectra" style="width: 100%">
+								<img src="./spectra.svg" alt="Spectra" style="width: 100%">
 							</div>
 						</div>
 						<div style="display: table-row">
@@ -378,14 +378,21 @@
                         <a href="https://ptplot.org/" target="_blank">https://ptplot.org</a>
                     </div>
                 </section>
-                <section>
-                    <h2>Summary</h2>
-                    <ul>
-                        <li>The equation of state has a significant effect on the GW spectrum</li>
-                        <li>Sound Shell Model enables quick computation of the GW spectrum</li>
-                        <li>Utilities: PTtools & PTPlot: <a href="https://www.ptplot.org">https://www.ptplot.org</a></li>
-                        <li>Open question: Can we distinguish between the EoS of different SM extensions from LISA data?</li>
-                    </ul>
+                <section
+						id="bubble-video2"
+						data-background-video="https://agenttix.kapsi.fi/fileshare/phd-presentations/infant-universe-blows-bubbles.webm"
+						data-background-video-loop data-background-video-muted
+						style="color: white;"
+				>
+					<div class="fragment fade-in" style="display: inline-block; border: 1px solid grey; background-color: black; opacity: 0.8; padding: 20px" data-fragment-index="1">
+                        <h2 style="color: white">Summary</h2>
+                        <ul>
+                            <li class="fragment fade-in data-fragment-index=2">The equation of state has a significant effect on the GW spectrum</li>
+                            <li class="fragment fade-in data-fragment-index=3">Sound Shell Model enables quick computation of the GW spectrum</li>
+                            <li class="fragment fade-in data-fragment-index=4">Utilities: PTtools & PTPlot, <a href="https://www.ptplot.org">https://www.ptplot.org</a></li>
+                            <li class="fragment fade-in data-fragment-index=5">Open question: Can we distinguish the effects of the EoS of different SM extensions from LISA data?</li>
+                        </ul>
+                    </div>
                 </section>
                 <section data-transition="none" data-visibility="uncounted">
 					<h2>Fluid velocity profiles</h2>
@@ -451,7 +458,7 @@
 
 				Reveal.on("slidechanged", (event) => {
 					const footer = $("footer");
-					if (event.currentSlide.id === "bubble-video") {
+					if (event.currentSlide.id === "bubble-video" || event.currentSlide.id === "bubble-video2") {
 						footer.css({"display": "", "visibility": "visible", "opacity": 1});
 					} else {
 						footer.css({"display": "none", "visibility": "hidden", "opacity": 0});
