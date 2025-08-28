@@ -1,4 +1,5 @@
 import matplotlib.pyplot as plt
+import numpy as np
 
 from pttools.bubble import Bubble
 from pttools.models import ConstCSModel
@@ -18,7 +19,10 @@ def main():
     # bubble_fig.savefig("bubble.svg")
 
     # Compute the gravitational wave spectrum for the bubble.
-    spectrum = Spectrum(bubble, nuc_type=NucType.EXPONENTIAL, r_star=0.1, low_k=False)
+    spectrum = Spectrum(
+        bubble, nuc_type=NucType.EXPONENTIAL, r_star=0.1, low_k=False,
+        y=np.logspace(-0.5, 3, 1000)
+    )
     spectrum.plot_multi_flat(path="ssm.svg")
 
 
