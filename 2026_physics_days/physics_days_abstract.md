@@ -27,7 +27,7 @@ which assumes the ultrarelativistic sound speed $c_s = \frac{1}{\sqrt{3}}$..
 In turn,
 [PTtools includes support for arbitrary equations of state](https://arxiv.org/abs/2511.20436),
 and therefore for a temperature- and phase-dependent sound speed $c_s(T,\phi)$.
-PTtools also the low-frequency tail of the spectrum.
+PTtools also includes the low-frequency tail of the spectrum.
 
 In addition to PTtools, we have developed the web-based plotting utility
 [PTPlot](https://www.ptplot.org/ptplot/).
