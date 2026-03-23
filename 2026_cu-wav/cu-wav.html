@@ -1,0 +1,190 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<link rel="dns-prefetch" href="https://cdnjs.cloudflare.com/">
+		<link rel="dns-prefetch" href="https://agenttix.kapsi.fi/">
+        <link rel="dns-prefetch" href="https://www.ptplot.org/">
+
+		<title>PTtools</title>
+
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/5.2.1/reveal.min.css" integrity="sha512-ZIo9ivf88U0L1S+0D/npMNTTkjez5B9cK5xIecN4IA2OmtbTNBbPAZo/0cBC195sq7FU7cEOVPwtit37f/+1rQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/5.2.1/plugin/highlight/monokai.min.css" integrity="sha512-z8wQkuDRFwCBfoj7KOiu1MECaRVoXx6rZQWL21x0BsVVH7JkqCp1Otf39qve6CrCycOOL5o9vgfII5Smds23rg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/5.2.1/theme/sky.min.css" integrity="sha512-gLymIttr2gq642OBM4g7Oab3Bx3J1XB1TSbP5DZqcXaDWULMmSHHHkXFdRsx4lMFmt9705mNRozs1qeSvOAJpw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+		<style>
+			:root h2 {
+                --r-heading-text-transform: none;
+                font-family: var(--r-main-font);
+			}
+            .slide-number {
+                font-size: 0.7em !important;
+                margin-bottom: 8px;
+                margin-right: 8px;
+            }
+			.slides{
+				font-size: 0.9em;
+			}
+			.slides h1 {
+				font-size: 2em;
+			}
+			.small {
+				font-size: 0.7em;
+			}
+            .todo {
+                border: 1px solid red;
+                color: red;
+            }
+            aside.controls {
+                margin-right: 115px !important;
+            }
+			footer {
+				position: absolute;
+				bottom: 5px;
+				left: 5px;
+				z-index: 100;
+				transition: visibility 0s, opacity 1s linear;
+				font-size: 0.5em;
+			}
+            mjx-container {
+                margin: 0.5em 0 !important;
+            }
+            /*
+            section {
+                font-size: 0.8em;
+            }
+            */
+            ul {
+                line-height: 1.5;
+            }
+            ul li ul li {
+                font-size: 85%;
+            }
+            .reveal table td {
+                border-bottom: 0 !important;
+            }
+            .reveal table tr.underline > td {
+                border-bottom: 1px solid black !important;
+            }
+        </style>
+		<script defer src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+		<script defer src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/5.2.1/plugin/highlight/highlight.min.js" integrity="sha512-IkPzJ3njtxNL2Frm7zr18CEj9HH+CEFAqh+jSKjXTHVFGtWG1+USbIXINU8zdGmyLpf/OBIVfpNLGNgwhlymkA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+		<script defer src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/5.2.1/plugin/math/math.min.js" integrity="sha512-tdpe8NdPiaypY/eUgKqr/aL5y0tLiFEde/joBsD4bfjyB8yNuGsReuN/D+XDcGbHQ8/xbDbJ0mqkfGdh2JxCAw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+		<script defer src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/5.2.1/plugin/notes/notes.min.js" integrity="sha512-6LAcdj7pQal9JkdALNexzVKd4zWuYUxOXuzdF21iOx7LJSlF5ibFi2TAR7GQ00XhfPAw7/R8f1dZ69gFGhzXtw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <script defer id="revealjs" src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/5.2.1/reveal.min.js" integrity="sha512-lRYVCjdH7dCPCzqLL6eBn78p6WGK5pZxgYBgzTQfWlfX7yiZFLt/qHOMSETHUIz2aZIU/KbjwYHiMsmrcVgJnA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+	</head>
+	<body>
+        <div class="reveal">
+			<div class="slides">
+                <section>
+					<h2>PTtools</h2>
+					<div style="display: table; width: 100%">
+						<div style="display: table-row">
+                            <div style="display: table-cell; width: 30%">
+								<h3>Inputs</h3>
+                                <table style="font-size: 90%">
+                                    <tr>
+                                        <td>$v_w$</td>
+                                        <td>Wall speed</td>
+                                    </tr>
+                                    <tr class="underline">
+                                        <td>$\alpha_n$</td>
+                                        <td>Transition strength</td>
+                                    </tr>
+                                    <tr>
+                                        <td>$T_*$</td>
+                                        <td>Temperature at GW formation</td>
+                                    </tr>
+                                    <tr class="underline">
+                                        <td>$g_*$</td>
+                                        <td>Degrees of freedom at GW formation</td>
+                                    </tr>
+                                    <tr>
+                                        <td>$r_*$</td>
+                                        <td>Hubble-scaled mean bubble spacing</td>
+                                    </tr>
+                                    <tr>
+                                        <td>or</td>
+                                        <td>or</td>
+                                    </tr>
+                                    <tr class="underline">
+                                        <td>$\frac{\beta}{H_*}$</td>
+                                        <td>Nucleation rate parameter</td>
+                                    </tr>
+                                    <tr>
+                                        <td>$c_s(T,\phi)$</td>
+                                        <td>Speed of sound, e.g. bag $c_s=\frac{1}{\sqrt{3}}$</td>
+                                    </tr>
+                                    <tr>
+                                        <td>or</td>
+                                        <td>or</td>
+                                    </tr>
+                                    <tr>
+                                        <td>$P(T,\phi)$</td>
+                                        <td>Equation of state</td>
+                                    </tr>
+                                </table>
+                            </div>
+							<div style="display: table-cell; text-align: center; vertical-align: middle;">
+								<h2 style="font-size: 3em">&#129070;</h2>
+							</div>
+                            <div style="display: table-cell; width: 30%">
+                                <h3>Sound Shell Model</h3>
+                                <ul style="font-size: 90%; margin-top: 0.1em">
+                                    <li>1-bubble hydrodynamics:<br>fluid shell profile</li>
+                                    <li>n-bubble averaging:<br>spectral density of velocity field</li>
+                                    <li>GWs from sound waves</li>
+                                    <li>Correction factors</li>
+                                    <li>Redshift $(z \rightarrow f_0)$</li>
+                                    <li>SNR comparison with LISA noise</li>
+                                </ul>
+                                <div style="margin-top: 3em">
+                                    PTtools<br>
+                                    <a href="https://github.com/CFT-HY/pttools" target="_blank">https://github.com/CFT-HY/pttools</a>
+                                    <br><br>
+                                    PTPlot<br>
+                                    <a href="https://www.ptplot.org/" target="_blank">https://www.ptplot.org</a>
+                                </div>
+                            </div>
+                            <div style="display: table-cell; text-align: center; vertical-align: middle;">
+								<h2 style="font-size: 3em">&#129070;</h2>
+							</div>
+							<div style="display: table-cell; width: 30%">
+								<h3>Outputs</h3>
+                                <img src="../2025_cern/spectra.svg" alt="Spectra" style="width: 100%">
+                                <ul style="font-size: 90%">
+                                    <li>GW spectra</li>
+                                    <li>SNR with respect to LISA noise</li>
+                                </ul>
+							</div>
+						</div>
+					</div>
+				</section>
+        </div>
+		<script type="text/javascript">
+			revealjs.addEventListener("load", () => {
+				Reveal.initialize({
+                    // Add the current slide number to the URL after a #
+					hash: true,
+
+					// Learn about plugins: https://revealjs.com/plugins/
+					plugins: [ RevealHighlight, RevealMath.MathJax3, RevealNotes ],
+
+                    // Show both current slide number and total number of slides
+					// slideNumber: "c/t",
+
+                    // Disable automatic scaling and centering
+                    // disableLayout: true,
+
+                    width: 1920,
+                    height: 1080,
+
+                    // margin: 0.04,
+                    // minScale: 0.2,
+                    // maxScale: 2.0,
+				});
+			});
+		</script>
+	</body>
+</html>
