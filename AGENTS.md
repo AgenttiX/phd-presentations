@@ -20,3 +20,7 @@ on Searching stochastic backgrounds in LISA data for signals from a phase transi
   [arXiv:1909.10040](https://arxiv.org/abs/1909.10040).
 - A review of phase transitions in the early universe is provided by
   [arXiv:2008.09136](https://arxiv.org/abs/2008.09136).
+
+## General instructions
+- When producing a long response such as a list of improvements,
+  also output it as a Markdown file in `./dev`.

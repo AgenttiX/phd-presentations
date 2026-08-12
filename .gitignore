@@ -1,4 +1,6 @@
 *.odp
 *.pdf
 .idea
+dev/*
+!dev/.gitkeep
 node_modules
