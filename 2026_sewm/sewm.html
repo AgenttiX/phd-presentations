@@ -5,6 +5,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
 		<link rel="dns-prefetch" href="https://cdnjs.cloudflare.com">
+        <!-- The videos are downloaded automatically when the previous slide is visible, so dns-prefetch is sufficient. -->
 		<link rel="dns-prefetch" href="https://agenttix.kapsi.fi">
         <link rel="dns-prefetch" href="https://www.ptplot.org">
         <link rel="dns-prefetch" href="https://www.youtube.com">
@@ -150,28 +151,23 @@
                         </li>
                     </ul>
                 </section>
-                <section
-						id="bubble-video"
-						data-background-video="https://agenttix.kapsi.fi/fileshare/phd-presentations/infant-universe-blows-bubbles.webm"
-						data-background-video-loop data-background-video-muted
-						style="color: white;"
-				>
-					<div class="fragment fade-in" style="display: inline-block; border: 1px solid grey; background-color: black; opacity: 0.8; padding: 20px" data-fragment-index="1">
+                <section data-background-image="../fig/bubble-video-snapshot.png" style="color: white;">
+					<div style="display: inline-block; border: 1px solid grey; background-color: black; opacity: 0.8; padding: 20px">
 						<h2 style="color: white">How to calculate the GW spectrum for a BSM theory?</h2>
                         <ul>
-							<li class="fragment fade-in" data-fragment-index="2">Lattice simulations
+							<li>Lattice simulations
 								<ul>
 									<li>Capture multiple types of effects: bubble expansion, collision and turbulence</li>
 									<li>Computationally expensive</li>
 								</ul>
 							</li>
-							<li class="fragment fade-in" data-fragment-index="3">Analytical approximations
+							<li>Analytical approximations
 								<ul>
 									<li>Broken power law, double broken power law</li>
 									<li>Useful but rather crude approximations</li>
 								</ul>
 							</li>
-							<li class="fragment fade-in" data-fragment-index="4">Semi-analytical approximation: Sound Shell Model
+							<li>Semi-analytical approximation: Sound Shell Model
 								<ul>
 									<li>Captures dependence on phase transition parameters</li>
 									<li>Reproduces the results of lattice simulations for intermediate-strength transitions</li>
@@ -329,6 +325,35 @@
 					</div>
 				</section>
                 <section data-transition="none">
+                    <h2>Comparison with lattice results for $\dot{\mathcal{P}}_\text{gw}$</h2>
+                    <div style="display: table; width: 100%">
+                        <div style="display: table-row">
+                            <div style="display: table-cell; width: 48%">
+                                <img src="../fig/correia_2025/vel-ps-gw_deflagration.png" alt="Deflagration" style="width:80%">
+                            </div>
+                            <div style="display: table-cell; width: 48%">
+                                <img src="../fig/correia_2025/vel-ps-gw_detonation.png" alt="Detonation" style="width: 80%">
+                            </div>
+                        </div>
+                        <div style="display: table-row">
+                            <div style="display: table-cell">
+                                Deflagration $(\alpha_n = 0.5, v_\text{wall} = 0.44)$
+                            </div>
+                            <div style="display: table-cell">
+                                Detonation $(\alpha_n = 0.67, v_\text{wall} = 0.92)$
+                            </div>
+                        </div>
+                    </div>
+                    <ul>
+                        <li>SSM is matched to the lattice results with a phenomenological suppression factor</li>
+                        <li>Deflagration is a better match</li>
+                        <li>(The peak on the right is a lattice artifact)</li>
+                    </ul>
+                    <br>
+                    Correia et al. (2025, <a href="https://arxiv.org/abs/2505.17824" target="_blank">arXiv:2505.17824</a>)
+                </section>
+                <!--
+                <section data-transition="none">
 					<h2>Fluid velocity profiles</h2>
 					<img class="r-stretch" src="../fig/const_cs_gw_v_1.svg" alt="Velocity profiles">
                     TODO: Update this figure or remove this slide.
@@ -338,10 +363,37 @@
                     <img class="r-stretch" src="../fig/const_cs_gw_1.svg" alt="GW power spectra">
                     TODO: Update this figure or remove this slide.
                 </section>
-                <section data-transition="none">
-					<h2>GW power spectra today</h2>
-					<img class="r-stretch" src="../fig/const_cs_gw_omgw0_1.svg" alt="GW power spectra today">
-                    TODO: Update this figure or remove this slide.
+                -->
+                <section>
+                    <h2>GW power spectra today</h2>
+                    <div style="display: table; width: 100%">
+                        <div style="display: table-row">
+                            <div style="display: table-cell; width: 33%">
+                                <!-- #svgView(viewBox(710, 0, 10, 350)) -->
+                                <img src="../fig/const_cs_gw_omgw0_1.svg" alt="GW power spectra today">
+                            </div>
+                            <div style="display: table-cell; width: 33%">
+                                TODO
+                            </div>
+                            <div style="display: table-cell; width: 33%">
+                                TODO
+                            </div>
+                        </div>
+                        <div style="display: table-row">
+                            <div style="display: table-cell">
+                                Deflagration
+                            </div>
+                            <div style="display: table-cell">
+                                Hybrid
+                            </div>
+                            <div style="display: table-cell">
+                                Detonation
+                            </div>
+                        </div>
+                    </div>
+                    <ul>
+                        <li>Investigation with the Sound Shell Model: varying the sound speed can significantly alter the GW spectrum</li>
+                    </ul>
 				</section>
                 <!--
                 <section data-transition="none">
@@ -368,90 +420,73 @@
                     Correia et al. (2025, <a href="https://arxiv.org/abs/2505.17824" target="_blank">arXiv:2505.17824</a>)
                 </section>
                 -->
-                <section data-transition="none">
-                    <h2>Comparison with lattice results for $\dot{\mathcal{P}}_\text{gw}$</h2>
-                    <div style="display: table; width: 100%">
-                        <div style="display: table-row">
-                            <div style="display: table-cell; width: 48%">
-                                <embed src="../fig/correia_2025/vel-ps-gw_detonation.pdf" alt="Detonation" style="width:100%; height: 600px">
-                            </div>
-                            <div style="display: table-cell; width: 48%">
-                                <embed src="../fig/correia_2025/vel-ps-gw_deflagration.pdf" alt="Deflagration" style="width:100%; height: 600px">
-                            </div>
-                        </div>
-                        <div style="display: table-row">
-                            <div style="display: table-cell">
-                                Detonation $(\alpha_n = 0.67, v_\text{wall} = 0.92)$
-                            </div>
-                            <div style="display: table-cell">
-                                Deflagration $(\alpha_n = 0.5, v_\text{wall} = 0.44)$
-                            </div>
-                        </div>
-                    </div>
-                    <ul>
-                        <li>SSM is matched to the lattice results with a phenomenological suppression factor</li>
-                        <li>Deflagration is a better match</li>
-                        <li>(The peak on the right is a lattice artifact)</li>
-                    </ul>
-                    <br>
-                    Correia et al. (2025, <a href="https://arxiv.org/abs/2505.17824" target="_blank">arXiv:2505.17824</a>)
-                </section>
                 <section>
-                    <h2>Beyond the Sound Shell Model: correction factors</h2>
+                    <h2>Calibration with lattice simulations</h2>
                     <div style="display: inline-block; width: 65%; position: absolute; left: 0; top: 5em">
                         <ul>
                             <li>
-                                Calibrating with 4D hydrodynamic lattice simulations
+                                Calibration with 4D hydrodynamic lattice simulations
                                 <ul>
                                     <li>Gowling & Hindmarsh (2021, <a href="https://arxiv.org/abs/2106.05984" target="_blank">arXiv:2106.05984</a>)</li>
                                     <li>Suppression factor $\Sigma(v_\text{w},\alpha_n)$</li>
                                 </ul>
                                 $$\mathcal{P}_\text{gw} = \Sigma(v_\text{w},\alpha_n) \mathcal{P}_\text{gw}^\text{ssm}$$
                             </li>
-                            <li>
-                                Thermal suppression of bubble nucleation
-                                <ul>
-                                    <li>Ajmi & Hindmarsh (2022, <a href="https://arxiv.org/abs/2205.04097" target="_blank">arXiv:2205.04097</a>)</li>
-                                    <li>Deflagrations heat the plasma outside the bubble wall<br>
-                                        &rarr; suppression of bubble nucleation</li>
-                                    <li>Bubble spacing enlargement factor $\Lambda$</li>
-                                </ul>
-                                $$R_* = \Lambda(\beta) R_{*,0}$$
-                                <!--
-                                $$\begin{align}
-                                R_* &= \Lambda(h_\text{x}) R_{*,0} \approx \left(1 + \frac{h_\text{x} \ln h_\text{x}}{1 - h_\text{x}} \right)^{-\frac{1}{3}} R_{*,0}
-                                \\
-                                h_\text{x} &= \frac{f}{1 + f} = 1 - \frac{v_\text{wall}^3}{v_\text{eff}^3}
-                                \\
-                                f &= \frac{3}{v_{\text{wall}}^3} \int_{v_{\text{wall}}}^{v_{\text{sh}}} \xi^2
-                                \left( 1 - e^{-\Delta S} \right) d\xi
-                                \end{align}$$
-                                -->
-                            </li>
-                            <li>
-                                Finite lifetime of the acoustic source
-                                <ul>
-                                    <li>Giombi et al. (2024, <a href="https://arxiv.org/abs/2409.01426" target="_blank">arXiv:2409.01426</a>)</li>
-                                    <li>Acoustic source duration $\frac{\Delta \eta_\text{v}}{\eta_*}$ &rarr; source lifetime factor $\Upsilon$</li>
-                                </ul>
-                                $$\tilde{P}_\text{gw}(z) \equiv \Upsilon_\ell \tilde{P}_\text{gw}^\text{ssm}(z)
-                                \quad
-                                \Upsilon_\ell
-                                \equiv \frac{1}{\ell(\nu)} \left(1 - \left(1 + \frac{\Delta \eta_\text{v}}{\eta_*} \right)^{-\ell(\nu)} \right)$$
-                            </li>
                         </ul>
-                    </div><div style="display: inline-block; width: 35%; position: absolute; right: 0; text-align: right">
+                    </div><div style="display: inline-block; width: 35%; position: absolute; right: 0; text-align: center">
                         <img src="../2025_nordita/suppression_no_hybrids_ext_cropped.svg" alt="Suppression" style="width: 100%">
                         Suppression factor $\Sigma(v_\text{w}, \alpha_n)$
-
-                        <div style="font-size: 70%; margin-top: 4em">
-                            $$\begin{align}
-                            \ell(\nu) &= 1 + 2\nu \\
-                            \omega(T,\phi) &\equiv \frac{p(T,\phi)}{e(T,\phi)} \\
-                            \omega_\text{bag} &= \frac{1}{3} \rightarrow \nu_\text{bag} = 0
-                            \end{align}$$
-                        </div>
                     </div>
+                </section>
+                <section>
+                    <h2>Thermal suppression of bubble nucleation</h2>
+                    <ul>
+                        <li>
+                            Thermal suppression of bubble nucleation
+                            <ul>
+                                <li>Ajmi & Hindmarsh (2022, <a href="https://arxiv.org/abs/2205.04097" target="_blank">arXiv:2205.04097</a>)</li>
+                                <li>Deflagrations heat the plasma outside the bubble wall<br>
+                                    &rarr; suppression of bubble nucleation</li>
+                                <li>Bubble spacing enlargement factor $\Lambda$</li>
+                            </ul>
+                            $$R_* = \Lambda(\beta) R_{*,0}$$
+                            <!--
+                            $$\begin{align}
+                            R_* &= \Lambda(h_\text{x}) R_{*,0} \approx \left(1 + \frac{h_\text{x} \ln h_\text{x}}{1 - h_\text{x}} \right)^{-\frac{1}{3}} R_{*,0}
+                            \\
+                            h_\text{x} &= \frac{f}{1 + f} = 1 - \frac{v_\text{wall}^3}{v_\text{eff}^3}
+                            \\
+                            f &= \frac{3}{v_{\text{wall}}^3} \int_{v_{\text{wall}}}^{v_{\text{sh}}} \xi^2
+                            \left( 1 - e^{-\Delta S} \right) d\xi
+                            \end{align}$$
+                            -->
+                        </li>
+                    </ul>
+                </section>
+                <section>
+                    <h2>Finite lifetime of the acoustic source</h2>
+                    <ul>
+                        <li>
+                            Finite lifetime of the acoustic source
+                            <ul>
+                                <li>Giombi et al. (2024, <a href="https://arxiv.org/abs/2409.01426" target="_blank">arXiv:2409.01426</a>)</li>
+                                <li>Acoustic source duration $\frac{\Delta \eta_\text{v}}{\eta_*}$ &rarr; source lifetime factor $\Upsilon$</li>
+                            </ul>
+                            $$\tilde{P}_\text{gw}(z) \equiv \Upsilon_\ell \tilde{P}_\text{gw}^\text{ssm}(z)
+                            \quad
+                            \Upsilon_\ell
+                            \equiv \frac{1}{\ell(\nu)} \left(1 - \left(1 + \frac{\Delta \eta_\text{v}}{\eta_*} \right)^{-\ell(\nu)} \right)$$
+                        </li>
+                        <li>
+                            <div style="font-size: 70%; margin-top: 4em">
+                                $$\begin{align}
+                                \ell(\nu) &= 1 + 2\nu \\
+                                \omega(T,\phi) &\equiv \frac{p(T,\phi)}{e(T,\phi)} \\
+                                \omega_\text{bag} &= \frac{1}{3} \rightarrow \nu_\text{bag} = 0
+                                \end{align}$$
+                            </div>
+                        </li>
+                    </ul>
                 </section>
                 <!--
                 <section>
@@ -486,14 +521,17 @@
                                 Giombi et al. (2024, <a href="https://arxiv.org/abs/2409.01426" target="_blank">arXiv:2409.01426</a>),
                                 (2026, <a href="https://arxiv.org/abs/2504.08037" target="_blank">arXiv:2504.08037</a>)
                             </li>
+                            <!--
                             <li>
                                 GW spectral density
                                 $$\tilde{P}_\text{gw}(z)
                                 = \frac{\tau_*}{\pi^2 z^3} \int_0^\infty \int_{|x-z|}^{x+z} d\tilde{x}
                                 \rho(z,x,\tilde{x}) \tilde{P}_v(x) \tilde{P}_v(\tilde{x}) \Delta(z,x,\tilde{x},\tau,\tau_*,\tau_\text{end})$$
                             </li>
+                            -->
+                            <li>Green's function oscillating at different timescales</li>
                             <li>Sound Shell Model (2019): $\Delta_\text{high} \propto \delta(z - c_s(x + \tilde{x})) \ \rightarrow \ k^9, \ k^{-3}$</li>
-                            <li>Low frequencies: $\Delta_\text{low} \ \rightarrow \ k^3$</li>
+                            <li>Low frequencies: $\Delta_\text{low} \ \rightarrow \ k^3$ (causality)</li>
                             <li>Intermediate frequencies: $\Delta_\text{int} \ \rightarrow \ k^1$</li>
                         </ul>
                         <!--
@@ -560,6 +598,41 @@
                         </div><!--<img src="../fig/singlet_jonathan_snr_histogram.svg" alt="SNR histogram" style="display: inline-block; float: right; margin-right: 1.5em; height: 10em">-->
                     </div>
                 </section>
+                <section
+						id="bubble-video"
+						data-background-video="https://agenttix.kapsi.fi/fileshare/phd-presentations/infant-universe-blows-bubbles.webm"
+						data-background-video-loop data-background-video-muted
+						style="color: white;"
+				>
+					<div class="fragment fade-in" style="display: inline-block; border: 1px solid grey; background-color: black; opacity: 0.8; padding: 20px" data-fragment-index="1">
+                        <h2 style="color: white">Summary</h2>
+                        <ul>
+                            <li class="fragment fade-in data-fragment-index=2">
+                                Sound Shell Model improves the power spectrum and SNR accuracy compared to broken power laws, while maintaining computational efficiency
+                                <ul>
+                                    <li>More detailed dependence on the phase transition parameters</li>
+                                </ul>
+                            </li>
+                            <li class="fragment fade-in data-fragment-index=3">
+                                Sound Shell Model has been extended to account for additional key physical effects
+                                <ul>
+                                    <li>Temperature and phase dependence of the equation of state and the sound speed</li>
+                                    <li>Thermal suppression of bubble nucleation</li>
+                                    <li>Finite lifetime of the acoustic source</li>
+                                    <li>Low-frequency tail of the spectrum</li>
+                                </ul>
+                            </li>
+                            <li class="fragment fade-in data-fragment-index=4">
+                                Utilities:
+                                <ul>
+                                    <li>PTtools: <a href="https://pttools.readthedocs.io" target="_blank">https://pttools.readthedocs.io</a></li>
+                                    <li>PTPlot: <a href="https://www.ptplot.org">https://www.ptplot.org</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                    <h2 class="fragment fade-in" style="color: white">Thank you!</h2>
+                </section>
                 <section>
                     <h2>PTtools & PTPlot</h2>
                     <div style="display: inline-block; width: 65%; position: absolute; left: 0">
@@ -609,41 +682,6 @@
                         <img src="../2025_cern/ptplot_form.png" alt="PTPlot form"><br>
                         <a href="https://www.ptplot.org/" target="_blank">https://www.ptplot.org</a>
                     </div>
-                </section>
-                <section
-					id="lisa-video"
-					data-background-video="https://agenttix.kapsi.fi/fileshare/phd-presentations/lisa-orbiting-the-sun.webm"
-					data-background-video-loop data-background-video-muted
-					style="color: white;"
-				>
-					<div class="fragment fade-in" style="display: inline-block; border: 1px solid grey; background-color: black; opacity: 0.8; padding: 20px" data-fragment-index="1">
-                        <h2 style="color: white">Summary</h2>
-                        <ul>
-                            <li class="fragment fade-in data-fragment-index=2">
-                                Sound Shell Model improves the power spectrum and SNR accuracy compared to broken power laws, while maintaining computational efficiency
-                                <ul>
-                                    <li>More detailed dependence on the phase transition parameters</li>
-                                </ul>
-                            </li>
-                            <li class="fragment fade-in data-fragment-index=3">
-                                Sound Shell Model has been extended to account for additional key physical effects
-                                <ul>
-                                    <li>Temperature and phase dependence of the equation of state and the sound speed</li>
-                                    <li>Thermal suppression of bubble nucleation</li>
-                                    <li>Finite lifetime of the acoustic source</li>
-                                    <li>Low-frequency tail of the spectrum</li>
-                                </ul>
-                            </li>
-                            <li class="fragment fade-in data-fragment-index=4">
-                                Utilities:
-                                <ul>
-                                    <li>PTtools: <a href="https://pttools.readthedocs.io" target="_blank">https://pttools.readthedocs.io</a></li>
-                                    <li>PTPlot: <a href="https://www.ptplot.org">https://www.ptplot.org</a></li>
-                                </ul>
-                            </li>
-                        </ul>
-                    </div>
-                    <h2 class="fragment fade-in" style="color: white">Thank you!</h2>
                 </section>
                 <section data-visibility="uncounted">
 					<h2>How to use PTtools</h2>

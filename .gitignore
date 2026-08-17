@@ -1,5 +1,6 @@
 *.odp
 *.pdf
+!fig/correia_2025/*.pdf
 .idea
 dev/*
 !dev/.gitkeep
