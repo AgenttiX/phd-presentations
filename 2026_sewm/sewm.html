@@ -159,8 +159,10 @@
                         <ul>
 							<li>Lattice simulations
 								<ul>
+                                    <li>3D hydrodynamics of relativistic fluid coupled to a scalar field (order parameter)</li>
 									<li>Capture multiple types of effects: bubble expansion, collision and turbulence</li>
 									<li>Computationally expensive</li>
+                                    <li>Limited frequency range (limited by the lattice size)</li>
 								</ul>
 							</li>
 							<li>Analytical approximations
@@ -186,7 +188,9 @@
                         Hindmarsh et al. (2021,
                         <a href="https://arxiv.org/abs/2008.09136" target="_blank">arXiv:2008.09136</a>),
                         hybrids discovered by Kurki-Suonio & Laine (1995,
-                        <a href="https://arxiv.org/abs/hep-ph/9501216" target="_blank">arXiv:hep-ph/9501216</a>)
+                        <a href="https://arxiv.org/abs/hep-ph/9501216" target="_blank">arXiv:hep-ph/9501216</a>),
+                        efficiency factor $\kappa(v_\text{wall}, \alpha)$ (2010,
+                        <a href="https://arxiv.org/abs/1004.4187" target="_blank">arXiv:1004.4187</a>)
                     </div>
                     <div style="display: inline-block; width: 40%; text-align: left; vertical-align: top; font-size: 0.9em">
                         Friction &rarr; constant $v_\text{wall}$ &rarr; self-similar solution<br><br>
@@ -272,7 +276,11 @@
 								<div style="font-size: 120%">GW spectra</div>
 								<ul>
 									<li>Sound Shell Model: sine transform etc.</li>
-                                    <li>Low-frequency tail</li>
+                                    <li>
+                                        Low-frequency tail, approximated as in
+                                        Giombi et al.
+                                        (2026, <a href="https://arxiv.org/abs/2504.08037" target="_blank">arXiv:2504.08037</a>)
+                                    </li>
                                     <li>Correction factors</li>
 									<li>Conversion to observable $\Omega_{\text{gw},0}(f)$</li>
 								</ul>
@@ -417,7 +425,7 @@
                 </section>
                 -->
                 <section>
-                    <h2>Calibration with 4D hydrodynamic lattice simulations</h2>
+                    <h2>Calibration with 3D hydrodynamic lattice simulations</h2>
                     <div style="display: inline-block; width: 65%; vertical-align: top; margin-top: 1.5em">
                         <ul>
                             <li>Gowling & Hindmarsh (2021, <a href="https://arxiv.org/abs/2106.05984" target="_blank">arXiv:2106.05984</a>)</li>
@@ -537,7 +545,19 @@
                             <li>Green's function oscillating at different timescales</li>
                             <li>Sound Shell Model (2019): $\Delta_\text{high} \propto \delta(z - c_s(x + \tilde{x})) \ \rightarrow \ k^9, \ k^{-3}$</li>
                             <li>Low frequencies: $\Delta_\text{low} \ \rightarrow \ k^3$ (causality)</li>
-                            <li>Intermediate frequencies: $\Delta_\text{int} \ \rightarrow \ k^1$</li>
+                            <li>
+                                Intermediate frequencies: $\Delta_\text{int} \ \rightarrow \ k^1$
+                                <ul>
+                                    <li>
+                                        Sharma et al. (2023,
+                                        <a href="https://arxiv.org/abs/2308.12916" target="_blank">arXiv:2308.12916</a>)
+                                    </li>
+                                    <li>
+                                        Roper pol et al. (2024,
+                                        <a href="https://arxiv.org/abs/2308.12943" target="_blank">arXiv:2308.12943</a>)
+                                    </li>
+                                </ul>
+                            </li>
                         </ul>
                         <!--
                         $$\begin{align}
