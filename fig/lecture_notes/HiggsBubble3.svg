@@ -4,9 +4,9 @@
 <svg
    version="1.1"
    id="svg2"
-   width="153.67905"
-   height="197.56921"
-   viewBox="0 0 153.67905 197.56921"
+   width="153.67900"
+   height="181.15800"
+   viewBox="0.00180 0.00180 153.67900 181.15800"
    xmlns="http://www.w3.org/2000/svg"
    xmlns:svg="http://www.w3.org/2000/svg">
   <defs
@@ -66,14 +66,6 @@
                    d="m 87.145,-69.078 c 0,-6.817 -5.524,-12.34 -12.34,-12.34 -6.817,0 -12.34,5.523 -12.34,12.34 0,6.812 5.523,12.34 12.34,12.34 6.816,0 12.34,-5.528 12.34,-12.34 z"
                    style="fill:none;stroke:#000000;stroke-width:0.763306;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
                    id="path40" />
-              </g>
-              <g
-                 id="g42"
-                 transform="scale(1,-1)">
-                <path
-                   d="m 67.934,-146.938 h 1.145 v -1.145 h -1.145 z"
-                   style="fill:none;stroke:#000000;stroke-width:0.190827;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
-                   id="path44" />
               </g>
               <text
                  xml:space="preserve"
