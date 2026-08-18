@@ -1,7 +1,8 @@
 *.odp
 *.pdf
 !fig/correia_2025/*.pdf
-.idea
-dev/*
+.idea/
+dev/
 !dev/.gitkeep
 node_modules
+render/
