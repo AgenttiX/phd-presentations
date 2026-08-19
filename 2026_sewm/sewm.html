@@ -187,9 +187,9 @@
                     <div class="small">
                         Hindmarsh et al. (2021,
                         <a href="https://arxiv.org/abs/2008.09136" target="_blank">arXiv:2008.09136</a>),
-                        hybrids discovered by Kurki-Suonio & Laine (1995,
-                        <a href="https://arxiv.org/abs/hep-ph/9501216" target="_blank">arXiv:hep-ph/9501216</a>),
-                        efficiency factor $\kappa(v_\text{wall}, \alpha)$ (2010,
+                        hybrids: Kurki-Suonio & Laine (1995,
+                        <a href="https://arxiv.org/abs/hep-ph/9501216" target="_blank">arXiv:hep-ph/9501216</a>),<br>
+                        efficiency factor $\kappa(v_\text{wall}, \alpha)$: Espinosa et al. (2010,
                         <a href="https://arxiv.org/abs/1004.4187" target="_blank">arXiv:1004.4187</a>)
                     </div>
                     <div style="display: inline-block; width: 40%; text-align: left; vertical-align: top; font-size: 0.9em">
@@ -249,13 +249,13 @@
 					<div style="display: table; width: 100%">
 						<div style="display: table-row">
                             <div style="display: table-cell; width: 48%">
-								<img src="../2025_cern/bubbles.svg" alt="Bubbles" style="width:100%">
+								<img src="../2025_cern/bubbles.svg" alt="Bubbles" style="width:100%; margin: 0">
 							</div>
 							<div style="display: table-cell; text-align: center; vertical-align: middle;">
 								<h2 style="font-size: 4em">&#11157;</h2>
 							</div>
 							<div style="display: table-cell; width: 48%">
-								<img src="../2025_cern/spectra.svg" alt="Spectra" style="width: 100%">
+								<img src="../2025_cern/spectra.svg" alt="Spectra" style="width: 100%; margin: 0">
 							</div>
 						</div>
 						<div style="display: table-row">
@@ -479,20 +479,26 @@
                 </section>
                 <section>
                     <h2>Finite lifetime of the acoustic source</h2>
-                    <div  style="display: inline-block; width: 65%">
+                    <div style="display: inline-block; width: 65%; vertical-align: top">
                         <ul>
                             <li>
                                 Giombi et al.
                                 (2024, <a href="https://arxiv.org/abs/2409.01426" target="_blank">arXiv:2409.01426</a>),
                                 (2026, <a href="https://arxiv.org/abs/2504.08037" target="_blank">arXiv:2504.08037</a>)
                             </li>
-                            <li>Acoustic source duration $\frac{\Delta \eta_\text{v}}{\eta_*}$ &rarr; source lifetime factor $\Upsilon$</li>
+                            <li>
+                                Acoustic source duration $\frac{\Delta \eta_\text{v}}{\eta_*}$ &rarr; source lifetime factor $\Upsilon$
+                                $$\tilde{P}_\text{gw}(z) \equiv \Upsilon_\ell \tilde{P}_\text{gw}^\text{ssm}(z)
+                                \qquad
+                                \Upsilon_\ell
+                                \equiv \frac{1}{\ell(\nu)} \left(1 - \left(1 + \frac{\Delta \eta_\text{v}}{\eta_*} \right)^{-\ell(\nu)} \right)$$
+                            </li>
+                            <li>
+                                Please also see Caprini et al. (2025,
+                                <a href="https://arxiv.org/abs/2409.03651" target="_blank">arXiv:2409.03651</a>)
+                            </li>
                         </ul>
-                        $$\tilde{P}_\text{gw}(z) \equiv \Upsilon_\ell \tilde{P}_\text{gw}^\text{ssm}(z)
-                        \qquad
-                        \Upsilon_\ell
-                        \equiv \frac{1}{\ell(\nu)} \left(1 - \left(1 + \frac{\Delta \eta_\text{v}}{\eta_*} \right)^{-\ell(\nu)} \right)$$
-                    </div><div style="display: inline-block; width: 35%">
+                    </div><div style="display: inline-block; width: 35%; vertical-align: top">
                         Auxiliary quantities
                         $$\begin{align}
                         \ell(\nu) &= 1 + 2\nu \\
@@ -553,8 +559,12 @@
                                         <a href="https://arxiv.org/abs/2308.12916" target="_blank">arXiv:2308.12916</a>)
                                     </li>
                                     <li>
-                                        Roper pol et al. (2024,
+                                        Roper Pol et al. (2024,
                                         <a href="https://arxiv.org/abs/2308.12943" target="_blank">arXiv:2308.12943</a>)
+                                    </li>
+                                    <li>
+                                        Roper Pol et al. (2026,
+                                        <a href="https://arxiv.org/abs/2501.05732" target="_blank">arXiv:2501.05732</a>)
                                     </li>
                                 </ul>
                             </li>
@@ -581,19 +591,19 @@
                     <h2>Signal-to-noise ratio (SNR) with improved modeling</h2>
                     <div style="width: 100%; display: block">
                         <div style="display: inline-block">
-                            <img src="../fig/singlet_jonathan_snr_alpha_beta_bpl.svg" alt="BPL" style="display: block">
+                            <img src="../fig/singlet_jonathan_snr_alpha_beta_bpl.svg" alt="BPL" style="display: block; margin: 0">
                             Broken power law (BPL)
                         </div>
                         <div style="display: inline-block">
-                            <img src="../fig/singlet_jonathan_snr_alpha_beta_dbpl.svg" alt="DBPL" style="display: block">
+                            <img src="../fig/singlet_jonathan_snr_alpha_beta_dbpl.svg" alt="DBPL" style="display: block; margin: 0">
                             Double broken power law (DBPL)
                         </div>
                         <div style="display: inline-block">
-                            <img src="../fig/singlet_jonathan_snr_alpha_beta_ssm.svg" alt="SSM" style="display: block">
+                            <img src="../fig/singlet_jonathan_snr_alpha_beta_ssm.svg" alt="SSM" style="display: block; margin: 0">
                             Sound Shell Model (SSM)
                         </div>
                     </div>
-                    <div style="width: 100%; display: block; margin-top: 0.5em">
+                    <div style="width: 70%; display: inline-block; margin-top: 0.5em">
                         <div style="display: inline-block">
                             <ul>
                                 <li>
@@ -621,6 +631,22 @@
                                 <li>Significant change in the shape of the SNR curves with improved modeling</li>
                             </ul>
                         </div><!--<img src="../fig/singlet_jonathan_snr_histogram.svg" alt="SNR histogram" style="display: inline-block; float: right; margin-right: 1.5em; height: 10em">-->
+                    </div><div style="display: inline-block; width: 30%; font-size: 75%; vertical-align: center">
+                        For DBPL examples, please see
+                        <ul>
+                            <li>
+                                Caprini et al. (2024,
+                                <a href="https://arxiv.org/abs/2403.03723" target="_blank">arXiv:2403.03723</a>)
+                            </li>
+                            <li>
+                                Caprini et al. (2026,
+                                <a href="https://arxiv.org/abs/2604.02240" target="_blank">arXiv:2604.02240</a>)
+                            </li>
+                            <li>
+                                Gowling et al. (2023,
+                                <a href="https://arxiv.org/abs/2209.13551" target="_blank">arXiv:2209.13551</a>)
+                            </li>
+                        </ul>
                     </div>
                 </section>
                 <section
