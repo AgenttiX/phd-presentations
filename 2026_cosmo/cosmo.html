@@ -57,6 +57,21 @@
                 border: 1px solid red;
                 color: red;
             }
+            .fullscreen-hint {
+                display: inline-block;
+                border: 2px solid red;
+                border-radius: 8px;
+                color: red;
+                padding: 0.3em 0.8em;
+                font-size: 0.7em;
+                pointer-events: none;
+                animation: fullscreen-hint-fade 10s linear forwards;
+            }
+            @keyframes fullscreen-hint-fade {
+                0% { opacity: 1; }
+                90% { opacity: 1; }
+                100% { opacity: 0; visibility: hidden; }
+            }
             aside.controls {
                 margin-right: 115px !important;
             }
@@ -115,6 +130,7 @@
                         <p>
                             <a href="https://agx.fi/phd-presentations/2026_cosmo/cosmo.html" class="small">Online slides</a>
                         </p>
+                        <div class="fullscreen-hint">Press F to view the slides in full screen.</div>
                     </div>
 				</section>
                 <section>
