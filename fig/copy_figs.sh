@@ -33,6 +33,7 @@ copy_fig_pttools "const_cs_gw_omgw0_2" "const_cs_gw_omgw0_2_v2"
 copy_fig_pttools "const_cs_gw_v" "const_cs_gw_v_v2"
 copy_fig_pttools "const_cs_gw_v_1" "const_cs_gw_v_1_v2"
 copy_fig_pttools "const_cs_gw_v_2" "const_cs_gw_v_2_v2"
+copy_fig_pttools "ssm_process" "ssm_process"
 copy_fig_pttools "suppression_no_hybrids_ext_cropped" "suppression_no_hybrids_ext_cropped_v2"
 
 copy_fig_ptplot "singlet_jonathan_snr_alpha_beta_bpl" "singlet_jonathan_snr_alpha_beta_bpl_v2"

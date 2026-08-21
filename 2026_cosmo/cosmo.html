@@ -92,6 +92,27 @@
             ul li ul li {
                 font-size: 85%;
             }
+            /* Make the title slide fill the whole slide, so that the logo can be anchored to its
+               bottom-left corner while the text stays vertically centered.
+               Only the visible slide is made a flex container, so that the other slides keep
+               their default display: none. */
+            .reveal .slides > section.title-slide {
+                height: 100%;
+            }
+            .reveal .slides > section.title-slide.present {
+                /* !important is needed to override the inline display style set by reveal.js */
+                display: flex !important;
+                flex-direction: column;
+                justify-content: center;
+            }
+            /* University of Helsinki logo in the bottom-left corner of the title slide */
+            .title-logo {
+                position: absolute;
+                left: 0;
+                bottom: 0;
+                width: 320px;
+                height: auto;
+            }
         </style>
 
         <script defer src="https://cdnjs.cloudflare.com/ajax/libs/jquery/4.0.0/jquery.min.js" integrity="sha512-8LENNbXmzI/Gbj+OwXmqR6V4QaUAw0/porPzy1+dQoJqC0JPHedWoe0DDOTL2uHA5XXJyIsPtiMHH86pVlay6A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
@@ -113,7 +134,7 @@
 		</div>
         <div class="reveal b612-regular">
 			<div class="slides">
-				<section>
+				<section class="title-slide">
                     <div>
                         <h1>Understanding stochastic gravitational wave backgrounds by exploring the parameter space of first-order phase transitions with the Sound Shell Model</h1>
                         <p>
@@ -131,6 +152,7 @@
                             <a href="https://agx.fi/phd-presentations/2026_cosmo/cosmo.html" class="small">Online slides</a>
                         </p>
                         <div class="fullscreen-hint">Press F to view the slides in full screen.</div>
+                        <img src="../fig/hy_logo/HY_logo_kolmikielinen_vaaka.svg" alt="University of Helsinki logo" class="title-logo">
                     </div>
 				</section>
                 <section>
@@ -261,7 +283,7 @@
                         </li>
                         -->
 					</ul>
-                    <img src="../2025_cern/ssm.svg" alt="Sound Shell Model" style="width: 100%; margin-bottom: 0">
+                    <img src="../fig/ssm_process.svg" alt="Sound Shell Model" style="width: 100%; margin-bottom: 0">
 				</section>
                 <section>
 					<h2>From fluid profiles to GW spectra</h2>
@@ -520,9 +542,10 @@
                     </div><div style="display: inline-block; width: 35%; vertical-align: top">
                         Auxiliary quantities
                         $$\begin{align}
-                        \ell(\nu) &= 1 + 2\nu \\
                         \omega(T,\phi) &\equiv \frac{p(T,\phi)}{e(T,\phi)} \\
-                        \omega_\text{bag} &= \frac{1}{3} \ \Rightarrow \ \nu_\text{bag} = 0
+                        \omega_\text{bag} &= \frac{1}{3} \ \Rightarrow \ \nu_\text{bag} = 0 \\
+                        \nu_\text{gdh2024} &\equiv \frac{1 - 3\omega}{1 + 3\omega} \\
+                        \ell(\nu) &\equiv 1 + 2\nu
                         \end{align}$$
                     </div>
                 </section>
